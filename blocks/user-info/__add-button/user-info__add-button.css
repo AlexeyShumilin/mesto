@@ -1,0 +1,17 @@
+.user-info__add-button {
+    position: absolute;
+    top: 37px;
+    right: 0;
+    background: url("../../../images/user-info__button.svg") center no-repeat;
+}
+
+@media screen and (max-width: 980px) {
+
+    .user-info__add-button {
+        position: static;
+        width: 282px;
+        height: 50px;
+        margin-bottom: 19px;
+        padding: 0;
+    }
+}

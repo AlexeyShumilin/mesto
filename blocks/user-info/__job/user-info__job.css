@@ -1,0 +1,14 @@
+.user-info__job {
+    margin: 5px 0 0 0;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+@media screen and (max-width: 980px) {
+    .user-info__job {
+        margin-bottom: 29px;
+        font-size: 14px;
+        line-height: 17px;
+        margin-top: 0;
+    }
+}
