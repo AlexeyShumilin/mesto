@@ -1,7 +1,7 @@
 .user-info {
     display: flex;
-    position: relative;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
     color: white;
     width: 100%;
 }

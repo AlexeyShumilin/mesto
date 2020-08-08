@@ -7,14 +7,12 @@
     margin-top: 45px;
     padding-bottom: 5px;
     cursor: pointer;
-    transition: opacity .4s;
+    transition: opacity 0.4s;
     background-color: #000;
     border-radius: 2px;
     color: white;
-  }
+}
 
-
-  .popup__save:hover{
+.popup__save:hover {
     background: rgba(0, 0, 0, 0.8);
-  }
-  
+}
