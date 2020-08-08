@@ -3,13 +3,13 @@
     background-color: transparent;
     border: none;
     width: 21px;
-    height: 18px;
+    height: 19px;
     cursor: pointer;
     transition: transform .3s linear;
 }
 
 .element__like:hover {
-    transform: scale(1.03);
+    transform: scale(1.1);
 }
 
 

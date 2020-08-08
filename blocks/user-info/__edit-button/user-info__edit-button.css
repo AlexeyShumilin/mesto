@@ -1,9 +1,7 @@
 .user-info__edit-button {
-    position: absolute;
-    left: 462px;
-    top: 39px;
     width: 24px;
     height: 24px;
+    margin-left: 19px;
     background: url("../../../images/edit-button.svg") center no-repeat;
 
 }
@@ -15,4 +13,9 @@
         width: 18px;
         height: 18px;
     }
+}
+
+.user-info__edit-button:hover{
+    background: url("../../../images/edit-button-hover.svg") center no-repeat;
+
 }
