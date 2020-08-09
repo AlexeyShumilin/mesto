@@ -9,6 +9,7 @@ let formElement = document.querySelector(".popup__container");
 let profileUserElement = document.querySelector(".user-info__name");
 let profileUserExplorerElement = document.querySelector(".user-info__job");
 
+/*сорри но я не совсем понимаю в чем здесб проблема, данные сохранияются, измениются, при нажатии на крестик не сохраняются, все по боифу*/
 
 let popupToggle = function () {
     if (popup.classList.toggle("popup_opened")) {
