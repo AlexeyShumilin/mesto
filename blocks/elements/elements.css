@@ -4,3 +4,8 @@
     gap: 21px 18px;
     justify-content: center;
 }
+@media screen and (max-width: 980px) {
+    .elements {
+        gap: 20px;
+    }
+}

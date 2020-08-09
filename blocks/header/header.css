@@ -1,5 +1,4 @@
 .header {
-    min-height: 120px;
     max-width: 882px;
     display: flex;
     align-items: center;
@@ -8,6 +7,6 @@
 
 @media screen and (max-width: 980px) {
     .header {
-        min-height: 84px;
+     width: 100%;
     }
 }
