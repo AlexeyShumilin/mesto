@@ -12,10 +12,11 @@ let profileUserExplorerElement = document.querySelector(".user-info__job");
 /*сорри но я не совсем понимаю в чем здесб проблема, данные сохранияются, измениются, при нажатии на крестик не сохраняются, все по боифу*/
 
 let popupToggle = function () {
-    if (popup.classList.toggle("popup_opened")) {
+    if (popup.classList.contains("popup_opened")) {
         nameInput.value = nameInfo.textContent;
         jobInput.value = jobInfo.textContent;
     }
+    popup.classList.toggle("popup_opened");
 };
 
 // Обработчик «отправки» формы, хотя пока
