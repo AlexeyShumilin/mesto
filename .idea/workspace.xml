@@ -25,9 +25,20 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1d7e0fb-dd42-4431-a57f-c1187e40560e" name="Default Changelist" comment="">
+    <list default="true" id="e1d7e0fb-dd42-4431-a57f-c1187e40560e" name="Default Changelist" comment="fixed last">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/elements/elements.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/elements/elements.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/page/page.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/page/page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__close/popup__close.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__close/popup__close.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Close-Icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/Close-Icon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/add-button-hover.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/add-button-hover.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/edit-button-hover.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/edit-button-hover.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/edit-button.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/edit-button.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/element__like.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/element__like.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/footer__logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/footer__logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/user-info__button.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/user-info__button.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/normalize.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +56,15 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/blocks/profile/__avatar/profile__avatar.css" root0="SKIP_INSPECTION" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="showPreview" value="true" />
+  </component>
   <component name="ProjectId" id="1fpZzHSRz1lEygbWm995mdIrpeK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -78,8 +93,20 @@
       <workItem from="1596995129884" duration="122000" />
       <workItem from="1597031151379" duration="287000" />
       <workItem from="1597064904667" duration="260000" />
-      <workItem from="1597065218449" duration="1211000" />
+      <workItem from="1597065218449" duration="2314000" />
+      <workItem from="1597334169086" duration="440000" />
+      <workItem from="1597419497251" duration="2000" />
+      <workItem from="1597440201794" duration="201000" />
+      <workItem from="1597489864959" duration="1242000" />
     </task>
+    <task id="LOCAL-00001" summary="fixed last">
+      <created>1597067512446</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597067512446</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,7 +136,15 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixed last" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed last" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="520" y="327" key="#Scopes" timestamp="1597067708106">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="520" y="327" key="#Scopes/0.23.1440.877@0.23.1440.877" timestamp="1597067708106" />
     <state x="100" y="123" width="1240" height="677" key="DiffContextDialog" timestamp="1597067411800">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -118,14 +153,18 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="113" y="73" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1597065090931" />
-    <state x="320" y="197" key="Vcs.Push.Dialog.v2" timestamp="1596969622693">
+    <state x="320" y="197" key="Vcs.Push.Dialog.v2" timestamp="1597067668640">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1596969622693" />
+    <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1597067668640" />
     <state x="484" y="158" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597066840119">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="484" y="158" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.877@0.23.1440.877" timestamp="1597066840119" />
+    <state x="420" y="27" width="600" height="870" key="find.popup" timestamp="1597490489255">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="420" y="27" width="600" height="870" key="find.popup/0.25.1440.875@0.25.1440.875" timestamp="1597490489255" />
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1596971011829">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
