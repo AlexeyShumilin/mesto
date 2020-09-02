@@ -74,7 +74,6 @@ function createElement(item) {
         evt.target.classList.toggle('element__like_active');
     });
 
-
     cards.prepend(cardsItem);
 }
 
@@ -89,7 +88,6 @@ function userCreateElement(evt) {
     newCard.link = popupLink.value;
     createElement(newCard);
     togglePopup(popupImage);
-
 }
 
 
