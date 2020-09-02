@@ -1,12 +1,18 @@
 .popup__item {
-    border: 0;
-    width: 100%;
-    box-sizing: border-box;
-    border-bottom: 1px solid #bcbcc4;
-    background-color: transparent;
-    margin: 17px auto;
     font-size: 14px;
     line-height: 17px;
-    color: #000;
-    font-family: inherit;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    height: 27px;
+    margin-bottom: 28px;
 }
+
+@media screen and (max-width: 1024px) {
+    .popup__item {
+        font-size: 12px;
+        line-height: 15px;
+        margin-top: 0;
+        margin-bottom: 13px;
+    }
+}
+

@@ -8,86 +8,80 @@
     <link href="./pages/index.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="body">
 <div class="page">
-    <header class="header page__section">
+    <header class="header">
         <img alt="логотип Место" class="header__logo" src="./images/logo.svg">
     </header>
     <main>
-        <div class="profile page__profile page__section">
+        <div class="profile page__profile">
             <div class="profile__avatar"></div>
             <div class="user-info">
                 <div class="user-info__data">
                     <div class="user-info__name-data">
                         <h1 class="user-info__name">Жак-Ив Кусто</h1>
-                        <button class="button user-info__edit-button" type="button"></button>
+                        <button class=" button user-info__edit-button" type="button"></button>
                     </div>
                     <p class="user-info__job">Исследователь океана</p>
                 </div>
                 <button class="button user-info__add-button" type="button"></button>
             </div>
         </div>
-        <div class="elements page__section page__elements">
-            <div class="element">
-                <img alt="фото" class="element__image" src="./images/karachaevsk.jpg">
-                <div class="element__information">
-                    <h2 class="element__title">Карачаевск</h2>
-                    <button class="element__like" disabled type="button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img alt="фото" class="element__image" src="./images/kirill-pershin-1404681-unsplash.jpg">
-                <div class="element__information">
-                    <h2 class="element__title">Гора Эльбрус</h2>
-                    <button class="element__like" disabled type="button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img alt="фото" class="element__image" src="./images/kirill-pershin-1556355-unsplash.jpg">
-                <div class="element__information">
-                    <h2 class="element__title">Домбай</h2>
-                    <button class="element__like" disabled type="button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img alt="фото" class="element__image" src="./images/kirill-pershin-1404681-unsplash.jpg">
-                <div class="element__information">
-                    <h2 class="element__title">Гора Эльбрус</h2>
-                    <button class="element__like" disabled type="button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img alt="фото" class="element__image" src="./images/kirill-pershin-1556355-unsplash.jpg">
-                <div class="element__information">
-                    <h2 class="element__title">Домбай</h2>
-                    <button class="element__like" disabled type="button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img alt="фото" class="element__image" src="./images/karachaevsk.jpg">
-                <div class="element__information">
-                    <h2 class="element__title">Карачаево-Черкессия</h2>
-                    <button class="element__like" disabled type="button"></button>
-                </div>
-            </div>
-            <section class="popup">
-                <div class="popup__container">
-                    <button class="popup__close" type="button"></button>
-                    <h2 class="popup__title">Редактировать профиль</h2>
-                    <form class="popup__form">
-                        <input class="popup__item popup__item_name" maxlength="20" placeholder="Жак-Ив Кусто"
-                               required type="text">
-                        <input class="popup__item popup__item_job" maxlength="28" placeholder="Исследователь океана"
-                               required type="text">
-                        <button class="popup__save" type="submit">Сохранить</button>
-                    </form>
-                </div>
-            </section>
-        </div>
+        <section class="elements">
+
+        </section>
     </main>
-    <footer class="footer page__section page__footer">
+    <footer class="footer page__footer">
         <p class="footer__title">© 2020 Mesto Russia</p>
     </footer>
+
+    <section class="popup">
+        <form class="popup__container">
+            <button class="popup__close" type="button"></button>
+            <h3 class="popup__title">Редактировать профиль</h3>
+            <input class="popup__item popup__item_name" id="author-input" name="name" placeholder="Жак-Ив Кусто"
+                   type="text">
+            <input class="popup__item popup__item_job" id="about-input" name="description"
+                   placeholder="Исследователь океана"
+                   type="text">
+            <button class="popup__save popup__save_disabled" type="submit">Сохранить</button>
+        </form>
+
+    </section>
+
+    <section class="popup popup-image">
+        <form class="popup__container popup-add__place">
+            <button class="popup__image-close" type="button"></button>
+            <h3 class="popup__title">Новое место</h3>
+            <input class="popup__item popup__input_type_name" id="name-input" name="name" placeholder="Название"
+                   type="text">
+            <input class="popup__item popup__input_type_link-url" id="link-input" name="link"
+                   placeholder="Ссылка на картинку"
+                   type="text">
+            <button class="popup-add__create popup-add__create_disabled" type="submit">Создать</button>
+        </form>
+    </section>
+
+
+    <section class="popup img-popup">
+        <form class="img-popup__content">
+            <button class="button img-popup__close" type="button"></button>
+            <img alt="#" class="img-popup__place" src="#">
+            <p class="img-popup__caption"></p>
+        </form>
+    </section>
+
+
+    <template id="template">
+        <div class="element">
+            <button class="element__delete-icon" type="button"></button>
+            <img alt="" class="element__image" src=""/>
+            <div class="element__information">
+                <p class="element__title"></p>
+                <button class="element__like" type="button"></button>
+            </div>
+        </div>
+    </template>
 </div>
 <script src="./script/script.js"></script>
 </body>

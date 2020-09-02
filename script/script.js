@@ -1,38 +1,127 @@
-let popup = document.querySelector(".popup");
-let popupOpenButton = document.querySelector(".user-info__edit-button");
-let popupCloseButton = popup.querySelector(".popup__close");
-let nameInfo = document.querySelector(".user-info__name");
-let jobInfo = document.querySelector(".user-info__job");
-let nameInput = document.querySelector(".popup__item_name");
-let jobInput = document.querySelector(".popup__item_job");
-let formElement = document.querySelector(".popup__container");
-let profileUserElement = document.querySelector(".user-info__name");
-let profileUserExplorerElement = document.querySelector(".user-info__job");
+const editButton = document.querySelector('.user-info__edit-button');
+const popup = document.querySelector('.popup');
+const popupClose = document.querySelector('.popup__close');
+const nameInput = document.querySelector('.popup__item_name');
+const infoInput = document.querySelector('.popup__item_job');
+const name = document.querySelector('.user-info__name');
+const info = document.querySelector('.user-info__job');
+const formElement = document.querySelector('form');
+const cards = document.querySelector('.elements');
+const addButton = document.querySelector('.user-info__add-button');
+const popupImage = document.querySelector('.popup-image');
+const popupImageClose = document.querySelector('.popup__image-close');
+const popupLink = document.querySelector('.popup__input_type_link-url');
+const popupName = document.querySelector('.popup__input_type_name');
+const formPlace = document.querySelector('.popup-add__place');
+const popupImg = document.querySelector('.img-popup');
+const popupImgClose = document.querySelector('.img-popup__close');
 
-/*сорри но я не совсем понимаю в чем здесб проблема, данные сохранияются, измениются, при нажатии на крестик не сохраняются, все по боифу*/
 
-let popupToggle = function () {
-    if (popup.classList.contains("popup_opened")) {
-        nameInput.value = nameInfo.textContent;
-        jobInput.value = jobInfo.textContent;
+const initialCards = [
+    {
+        name: 'Архыз',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    },
+    {
+        name: 'Челябинская область',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+    },
+    {
+        name: 'Иваново',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+    },
+    {
+        name: 'Камчатка',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+    },
+    {
+        name: 'Холмогорский район',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+    },
+    {
+        name: 'Байкал',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
     }
-    popup.classList.toggle("popup_opened");
-};
+];
 
-// Обработчик «отправки» формы, хотя пока
-// она никуда отправляться не будет
-function formSubmitHandler(evt) {
-    evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
-    // Так мы можем определить свою логику отправки.
-    // О том, как это делать, расскажем позже.
-    profileUserElement.textContent = nameInput.value;
-    profileUserExplorerElement.textContent = jobInput.value;
-    popup.classList.toggle("popup_opened");
+
+function createElement(item) {
+    const template = document.querySelector('#template').content;
+    const cardsItem = template.cloneNode(true);
+    const cardDelete = cardsItem.querySelector('.element__delete-icon');
+    const likeButton = cardsItem.querySelector('.element__like');
+    const cardImg = cardsItem.querySelector('.element__image');
+    const cardTitle = cardsItem.querySelector('.element__title');
+
+    cardImg.src = item.link;
+    cardImg.alt = item.name;
+    cardTitle.textContent = item.name;
+
+    cardImg.addEventListener('click', function openPhoto(evt) {
+        const photo = evt.target;
+        popupImg.querySelector('.img-popup__place').src = photo.src;
+        popupImg.querySelector('.img-popup__caption').textContent = photo.alt;
+        togglePopup(popupImg);
+    });
+
+    cardDelete.addEventListener('click', function (evt) {
+
+        evt.target.parentElement.remove();
+    });
+
+    likeButton.addEventListener('click', function (evt) {
+
+        evt.target.classList.toggle('element__like_active');
+    });
+
+
+    cards.prepend(cardsItem);
 }
 
-// Прикрепляем обработчик к форме:
-// он будет следить за событием “submit” - «отправка»
-formElement.addEventListener("submit", formSubmitHandler);
+initialCards.forEach(createElement);
 
-popupOpenButton.addEventListener("click", popupToggle);
-popupCloseButton.addEventListener("click", popupToggle);
+
+
+function userCreateElement(evt) {
+    evt.preventDefault();
+    const newCard = [];
+    newCard.name = popupName.value;
+    newCard.link = popupLink.value;
+    createElement(newCard);
+    togglePopup(popupImage);
+
+}
+
+
+
+function togglePopup(elem) {
+    elem.classList.toggle('popup_is-opened');
+    nameInput.value = name.textContent;
+    infoInput.value = info.textContent;
+    document.addEventListener('keydown', escHandler);
+}
+
+function formSubmitHandler(evt) {
+    evt.preventDefault();
+    name.textContent = nameInput.value
+    info.textContent = infoInput.value
+    togglePopup(popup);
+}
+
+
+
+
+formElement.addEventListener('submit', formSubmitHandler);
+
+editButton.addEventListener('click', () => togglePopup(popup));
+
+popupClose.addEventListener('click', () => togglePopup(popup));
+
+formPlace.addEventListener('submit', userCreateElement);
+
+addButton.addEventListener('click', () => togglePopup(popupImage));
+
+popupImageClose.addEventListener('click', () => togglePopup(popupImage));
+
+popupImgClose.addEventListener('click', () => togglePopup(popupImg));
+

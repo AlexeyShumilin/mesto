@@ -1,15 +1,17 @@
 .page {
-
-    background-color: black;
     min-height: 100vh;
     font-family: "Inter", "Arial", sans-serif;
     padding-bottom: 60px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    max-width: 882px;
+    margin: 0 auto;
+
 }
+
 
 @media screen and (max-width: 1024px) {
     .page {
-        padding-bottom: 0px;
+        padding-bottom: 0;
     }
 }
