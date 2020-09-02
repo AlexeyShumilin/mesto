@@ -27,9 +27,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1d7e0fb-dd42-4431-a57f-c1187e40560e" name="Default Changelist" comment="fixed last">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/img-popup/_is-opened/img-popup_is-opened.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/img-popup/_is-opened/img-popup_is-opened.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/img-popup/img-popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/img-popup/img-popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +108,7 @@
       <workItem from="1598204653941" duration="34455000" />
       <workItem from="1598540137296" duration="28593000" />
       <workItem from="1598774771203" duration="610000" />
-      <workItem from="1598776059428" duration="13048000" />
+      <workItem from="1598776059428" duration="13512000" />
     </task>
     <task id="LOCAL-00001" summary="fixed last">
       <created>1597067512446</created>
