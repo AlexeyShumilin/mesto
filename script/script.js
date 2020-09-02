@@ -109,7 +109,17 @@ function formSubmitHandler(evt) {
 }
 
 
+function escHandler(evt) {
+    if (evt.key === 'Escape') {
+        document.querySelector('.popup_is-opened').classList.remove('popup_is-opened');
+        document.removeEventListener('keydown', escHandler);
+    }
+}
 
+document.addEventListener('click', function (evt) {
+    evt.target.classList.remove('popup_is-opened');
+    evt.stopPropagation();
+});
 
 formElement.addEventListener('submit', formSubmitHandler);
 
