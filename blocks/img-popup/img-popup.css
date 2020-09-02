@@ -9,4 +9,6 @@
     align-items: center;
     justify-content: center;
     display: none;
+    opacity: 0;
+    transition: 0.3s linear;
 }
