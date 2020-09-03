@@ -15,6 +15,7 @@ const popupName = document.querySelector('.popup__input_type_name');
 const formPlace = document.querySelector('.popup-add__place');
 const popupImg = document.querySelector('.img-popup');
 const popupImgClose = document.querySelector('.img-popup__close');
+const template = document.querySelector('#template').content;
 
 
 const initialCards = [
@@ -46,7 +47,6 @@ const initialCards = [
 
 
 function createElement(item) {
-    const template = document.querySelector('#template').content;
     const cardsItem = template.cloneNode(true);
     const cardDelete = cardsItem.querySelector('.element__delete-icon');
     const likeButton = cardsItem.querySelector('.element__like');
@@ -83,7 +83,7 @@ initialCards.forEach(createElement);
 
 function userCreateElement(evt) {
     evt.preventDefault();
-    const newCard = [];
+    const newCard = {};
     newCard.name = popupName.value;
     newCard.link = popupLink.value;
     createElement(newCard);
@@ -97,6 +97,7 @@ function togglePopup(elem) {
     nameInput.value = name.textContent;
     infoInput.value = info.textContent;
     document.addEventListener('keydown', escHandler);
+    document.removeEventListener('keydown', escHandler);
 }
 
 function formSubmitHandler(evt) {
@@ -110,7 +111,6 @@ function formSubmitHandler(evt) {
 function escHandler(evt) {
     if (evt.key === 'Escape') {
         document.querySelector('.popup_is-opened').classList.remove('popup_is-opened');
-        document.removeEventListener('keydown', escHandler);
     }
 }
 
