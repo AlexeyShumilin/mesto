@@ -4,7 +4,12 @@
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     height: 27px;
-    margin-bottom: 28px;
+    margin-bottom: 5px;
+    margin-top: 28px;
+}
+
+.popup__item:invalid {
+    border-bottom: 1px solid #FF0000;
 }
 
 @media screen and (max-width: 1024px) {
