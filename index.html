@@ -41,7 +41,7 @@
             <h3 class="popup__title">Редактировать профиль</h3>
             <input class="popup__item popup__item_name popup__input-error" id="author-input" maxlength="40"
                    minlength="2"
-                   name="name" placeholder="Жак-Ив Кусто" required type="text"  pattern="[A-Za-zА-ЯЁа-яё -]{1,}">
+                   name="name" pattern="[A-Za-zА-ЯЁа-яё -]{1,}" placeholder="Жак-Ив Кусто" required type="text">
             <span class="popup__span-error popup__span-error_active" id="author-input-error"></span>
             <input class="popup__item popup__item_job popup__input-error" id="about-input" maxlength="400"
                    minlength="2"
@@ -59,8 +59,7 @@
             <input class="popup__item popup__input_type_name popup__input-error" id="name-input" maxlength="30"
                    minlength="2"
                    name="name" placeholder="Название"
-                   type="text"
-            >
+                   type="text">
             <span class="popup__span-error popup__span-error_active" id="name-input-error"></span>
             <input class="popup__item popup__input_type_link-url popup__input-error" id="link-input" name="link"
                    placeholder="Ссылка на картинку"
@@ -70,7 +69,6 @@
         </form>
     </section>
 
-
     <section class="popup img-popup">
         <form class="img-popup__content">
             <button class="button img-popup__close" type="button"></button>
@@ -78,7 +76,6 @@
             <p class="img-popup__caption"></p>
         </form>
     </section>
-
 
     <template id="template">
         <div class="element">
