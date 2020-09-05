@@ -18,109 +18,52 @@ const popupImgClose = document.querySelector(".img-popup__close");
 const cardTemplate = document.querySelector("#template").content;
 
 const initialCards = [
-    {
-        name: "Архыз",
-        link:
-            "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
-    },
-    {
-        name: "Челябинская область",
-        link:
-            "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg",
-    },
-    {
-        name: "Иваново",
-        link:
-            "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg",
-    },
-    {
-        name: "Камчатка",
-        link:
-            "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg",
-    },
-    {
-        name: "Холмогорский район",
-        link:
-            "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg",
-    },
-    {
-        name: "Байкал",
-        link:
-            "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
-    },
+  {
+    name: "Архыз",
+    link:
+      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
+  },
+  {
+    name: "Челябинская область",
+    link:
+      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg",
+  },
+  {
+    name: "Иваново",
+    link:
+      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg",
+  },
+  {
+    name: "Камчатка",
+    link:
+      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg",
+  },
+  {
+    name: "Холмогорский район",
+    link:
+      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg",
+  },
+  {
+    name: "Байкал",
+    link:
+      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
+  },
 ];
 
-// функция создания карточек
 const addCard = (item) => {
-    // клонируем содержимое тега template
-    const cardsItem = cardTemplate.cloneNode(true);
-    const cardTitle = cardsItem.querySelector('.element__title');
-    const cardImg = cardsItem.querySelector(".element__image");
-    // наполняем содержимым
-    cardTitle.textContent = item.name;
-    cardImg.src = item.link;
-    cardImg.alt = item.name;
-
-
-    cardsItem.querySelector('.element__delete-icon').addEventListener('click', deleteElement);
-    cardsItem.querySelector('.element__like').addEventListener('click', handleLikeIcon);
-
-    //открываем pop-up с картинкой
-    cardImg.addEventListener("click", function openPhoto(evt) {
-        const photo = evt.target;
-        popupImg.querySelector(".img-popup__place").src = photo.src;
-        popupImg.querySelector(".img-popup__caption").textContent = photo.alt;
-        togglePopup(popupImg);
-    });
-
-    return cardsItem;
-
-
-}
-
-function renderCard(item) {
-    let element = addCard(item);
-    sectionCards.prepend(element);
-}
-
-// ставим лайки!!!!!!
-function handleLikeIcon(evt) {
-    evt.target.classList.toggle("element__like_active");
-}
-
-initialCards.forEach(item => {
-    renderCard(item);
-});
-
-function userCreateElement(evt) {
-    evt.preventDefault();
-    const element = {};
-    element.name = popupName.value;
-    element.link = popupLink.value;
-    renderCard(element);
-    togglePopup(popupImage);
-}
-
-
-//функция удаления карточек
-function deleteElement(e) {
-    const element = e.target.closest('.element');
-    element.remove();
-}
-
-initialCards.forEach(addCard);
-
-/*
-function createElement(item) {
-  const cardsItem = template.cloneNode(true);
-  const cardDelete = cardsItem.querySelector(".element__delete-icon");
-  const likeButton = cardsItem.querySelector(".element__like");
-  const cardImg = cardsItem.querySelector(".element__image");
+  const cardsItem = cardTemplate.cloneNode(true);
   const cardTitle = cardsItem.querySelector(".element__title");
-
+  const cardImg = cardsItem.querySelector(".element__image");
+  cardTitle.textContent = item.name;
   cardImg.src = item.link;
   cardImg.alt = item.name;
-  cardTitle.textContent = item.name;
+
+  cardsItem
+    .querySelector(".element__delete-icon")
+    .addEventListener("click", deleteElement);
+  cardsItem
+    .querySelector(".element__like")
+    .addEventListener("click", handleLikeIcon);
 
   cardImg.addEventListener("click", function openPhoto(evt) {
     const photo = evt.target;
@@ -129,61 +72,70 @@ function createElement(item) {
     togglePopup(popupImg);
   });
 
-  cardDelete.addEventListener("click", function (evt) {
-    evt.target.parentElement.remove();
-  });
+  return cardsItem;
+};
 
-  likeButton.addEventListener("click", function (evt) {
-    evt.target.classList.toggle("element__like_active");
-  });
-
-  sectionCards.prepend(cardsItem);
+function renderCard(item) {
+  let element = addCard(item);
+  sectionCards.prepend(element);
 }
 
+function handleLikeIcon(evt) {
+  evt.target.classList.toggle("element__like_active");
+}
 
+initialCards.forEach((item) => {
+  renderCard(item);
+});
 
 function userCreateElement(evt) {
   evt.preventDefault();
-  const newCard = {};
-  newCard.name = popupName.value;
-  newCard.link = popupLink.value;
-  addCard(newCard);
+  const element = {};
+  element.name = popupName.value;
+  element.link = popupLink.value;
+  renderCard(element);
   togglePopup(popupImage);
 }
-*/
+
+function deleteElement(e) {
+  const element = e.target.closest(".element");
+  element.remove();
+}
+
+initialCards.forEach(addCard);
 
 function togglePopup(elem) {
-    elem.classList.toggle("popup_is-opened");
-    document.addEventListener("keydown", escHandler);
+  elem.classList.toggle("popup_is-opened");
+  document.addEventListener("keydown", escHandler);
 }
 
 function formSubmitHandler(evt) {
-    evt.preventDefault();
-    name.textContent = nameInput.value;
-    info.textContent = infoInput.value;
-    togglePopup(popup);
+  evt.preventDefault();
+  name.textContent = nameInput.value;
+  info.textContent = infoInput.value;
+  togglePopup(popup);
 }
 
 function escHandler(evt) {
-    if (evt.key === "Escape") {
-        document
-            .querySelector(".popup_is-opened")
-            .classList.remove("popup_is-opened");
-        document.removeEventListener("keydown", escHandler);
-    }
+  if (evt.key === "Escape") {
+    document
+      .querySelector(".popup_is-opened")
+      .classList.remove("popup_is-opened");
+    document.removeEventListener("keydown", escHandler);
+  }
 }
 
 document.addEventListener("click", function (evt) {
-    evt.target.classList.remove("popup_is-opened");
-    evt.stopPropagation();
+  evt.target.classList.remove("popup_is-opened");
+  evt.stopPropagation();
 });
 
 formElement.addEventListener("submit", formSubmitHandler);
 
 editButton.addEventListener("click", () => {
-    togglePopup(popup);
-    nameInput.value = name.textContent;
-    infoInput.value = info.textContent;
+  togglePopup(popup);
+  nameInput.value = name.textContent;
+  infoInput.value = info.textContent;
 });
 
 popupClose.addEventListener("click", () => togglePopup(popup));
