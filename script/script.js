@@ -6,7 +6,7 @@ const infoInput = document.querySelector(".popup__item_job");
 const name = document.querySelector(".user-info__name");
 const info = document.querySelector(".user-info__job");
 const formElement = document.querySelector("form");
-const cards = document.querySelector(".elements");
+const sectionCards = document.querySelector(".elements");
 const addButton = document.querySelector(".user-info__add-button");
 const popupImage = document.querySelector(".popup-image");
 const popupImageClose = document.querySelector(".popup__image-close");
@@ -76,7 +76,7 @@ function createElement(item) {
     evt.target.classList.toggle("element__like_active");
   });
 
-  cards.prepend(cardsItem);
+  sectionCards.prepend(cardsItem);
 }
 
 initialCards.forEach(createElement);
@@ -92,10 +92,8 @@ function userCreateElement(evt) {
 
 function togglePopup(elem) {
   elem.classList.toggle("popup_is-opened");
-  nameInput.value = name.textContent;
-  infoInput.value = info.textContent;
+
   document.addEventListener("keydown", escHandler);
-  document.removeEventListener("keydown", escHandler);
 }
 
 function formSubmitHandler(evt) {
@@ -110,6 +108,7 @@ function escHandler(evt) {
     document
       .querySelector(".popup_is-opened")
       .classList.remove("popup_is-opened");
+    document.removeEventListener("keydown", escHandler);
   }
 }
 
@@ -120,7 +119,11 @@ document.addEventListener("click", function (evt) {
 
 formElement.addEventListener("submit", formSubmitHandler);
 
-editButton.addEventListener("click", () => togglePopup(popup));
+editButton.addEventListener("click", () => {
+  togglePopup(popup);
+  nameInput.value = name.textContent;
+  infoInput.value = info.textContent;
+});
 
 popupClose.addEventListener("click", () => togglePopup(popup));
 

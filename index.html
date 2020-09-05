@@ -41,11 +41,11 @@
             <h3 class="popup__title">Редактировать профиль</h3>
             <input class="popup__item popup__item_name popup__input-error" id="author-input" maxlength="40"
                    minlength="2"
-                   name="name" pattern="[A-Za-zА-ЯЁа-яё -]{1,}" placeholder="Жак-Ив Кусто" required type="text">
+                   name="name" pattern="[A-Za-zА-ЯЁа-яё -]{1,}" placeholder="Жак-Ив Кусто"  type="text">
             <span class="popup__span-error popup__span-error_active" id="author-input-error"></span>
             <input class="popup__item popup__item_job popup__input-error" id="about-input" maxlength="400"
                    minlength="2"
-                   name="description" placeholder="Исследователь океана" required type="text">
+                   name="description" placeholder="Исследователь океана"  type="text">
             <span class="popup__span-error popup__span-error_active" id="about-input-error"></span>
             <button class="popup__save popup__save_disabled" type="submit">Сохранить</button>
         </form>
@@ -59,11 +59,11 @@
             <input class="popup__item popup__input_type_name popup__input-error" id="name-input" maxlength="30"
                    minlength="2"
                    name="name" placeholder="Название"
-                   type="text">
+                   type="text" required>
             <span class="popup__span-error popup__span-error_active" id="name-input-error"></span>
             <input class="popup__item popup__input_type_link-url popup__input-error" id="link-input" name="link"
                    placeholder="Ссылка на картинку"
-                   type="url">
+                   type="url" required>
             <span class="popup__span-error popup__span-error_active" id="link-input-error"></span>
             <button class="popup-add__create popup__save popup__save_disabled" type="submit">Создать</button>
         </form>
@@ -72,7 +72,7 @@
     <section class="popup img-popup">
         <form class="img-popup__content">
             <button class="button img-popup__close" type="button"></button>
-            <img alt="#" class="img-popup__place" src="#">
+            <img alt="" class="img-popup__place" src="">
             <p class="img-popup__caption"></p>
         </form>
     </section>
