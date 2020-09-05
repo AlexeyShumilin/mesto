@@ -12,12 +12,12 @@
     border-bottom: 1px solid #FF0000;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 450px) {
     .popup__item {
         font-size: 12px;
         line-height: 15px;
-        margin-top: 0;
-        margin-bottom: 13px;
+        margin-top: 8px;
+        margin-bottom: 5px;
     }
 }
 
