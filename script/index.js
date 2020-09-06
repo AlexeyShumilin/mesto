@@ -76,6 +76,7 @@ function deleteElement(e) {
     element.remove();
 
 }
+<<<<<<< HEAD
 
 function escHandler(evt) {
     if (evt.key === "Escape") {
@@ -85,16 +86,34 @@ function escHandler(evt) {
     }
 }
 
+=======
+function escHandler(evt) {
+  if (evt.key === "Escape") {
+    document
+        .querySelector(".popup_is-opened")
+        .classList.remove("popup_is-opened");
+  }
+}
+>>>>>>> parent of 2919f70... esc handler
 
 function openPopup(elem) {
     elem.classList.add("popup_is-opened");
     document.addEventListener("keydown", escHandler);
 }
 
+<<<<<<< HEAD
 function closePopup(elem) {
     elem.classList.remove("popup_is-opened");
     document.removeEventListener("keydown", escHandler);
 
+=======
+function togglePopup(elem) {
+  elem.classList.toggle("popup_is-opened");
+  nameInput.value = name.textContent;
+  infoInput.value = info.textContent;
+  document.addEventListener("keydown", escHandler);
+  document.removeEventListener("keydown", escHandler);
+>>>>>>> parent of 2919f70... esc handler
 }
 
 
@@ -111,6 +130,11 @@ document.addEventListener("click", function (evt) {
         closePopup(evt.target);
         evt.stopPropagation();
     }
+});
+
+document.addEventListener("click", function (evt) {
+  evt.target.classList.remove("popup_is-opened");
+  evt.stopPropagation();
 });
 
 formElement.addEventListener("submit", formSubmitHandler);
