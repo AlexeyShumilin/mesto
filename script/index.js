@@ -77,21 +77,34 @@ function deleteElement(e) {
   element.remove();
 
 }
-function escHandler(evt) {
-  if (evt.key === "Escape") {
-    document
-        .querySelector(".popup_is-opened")
-        .classList.remove("popup_is-opened");
-  }
-}
+document.addEventListener('keydown', (evt) => {
+  if (evt.key === 'Escape') {
+    if (popupImage.classList.contains('popup_is-opened')) {
+      togglePopup(popupImage);
+    }
+    if (popupImg.classList.contains('popup_is-opened')) {
+      togglePopup(popupImg);
+
+    }
+    if (popup.classList.contains('popup_is-opened')) {
+      togglePopup(popup);
+    }
+  };
+});
+
+
+document.addEventListener("click", function (evt) {
+  evt.target.classList.remove("popup_is-opened");
+  evt.stopPropagation();
+});
+
 
 
 function togglePopup(elem) {
   elem.classList.toggle("popup_is-opened");
   nameInput.value = name.textContent;
   infoInput.value = info.textContent;
-  document.addEventListener("keydown", escHandler);
-  document.removeEventListener("keydown", escHandler);
+
 }
 
 
@@ -103,11 +116,6 @@ function formSubmitHandler(evt) {
 }
 
 
-
-document.addEventListener("click", function (evt) {
-  evt.target.classList.remove("popup_is-opened");
-  evt.stopPropagation();
-});
 
 formElement.addEventListener("submit", formSubmitHandler);
 
