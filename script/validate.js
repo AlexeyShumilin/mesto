@@ -3,7 +3,7 @@ const validationSetup = {
     inputSelector: ".popup__item",
     submitButtonSelector: ".popup__save",
     inactiveButtonClass: "popup__save_disabled",
-    inputErrorClass: "popup__input-error",
+    inputErrorClass: "popup__item-error"
 };
 
 const openInputError = (

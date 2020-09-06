@@ -8,8 +8,6 @@
     top: -39px;
     border: none;
     background: rgba(0, 0, 0, 0) url("../../../images/close-icon.svg") no-repeat center;
-
-
 }
 
 .popup__close:hover {

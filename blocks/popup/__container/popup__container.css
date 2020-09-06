@@ -5,12 +5,12 @@
     background-color: white;
     border-radius: 10px;
     position: relative;
-    top: -95px;
+    top: -48px;
     bottom: 0;
     right: 0;
     left: 0;
     margin: auto;
-    padding: 32px;
+    padding: 35px;
     display: flex;
     flex-direction: column;
 }

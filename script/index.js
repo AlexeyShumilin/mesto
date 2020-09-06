@@ -1,3 +1,4 @@
+import initialCards from "./cards.js";
 const editButton = document.querySelector(".user-info__edit-button");
 const popup = document.querySelector(".popup");
 const popupClose = document.querySelector(".popup__close");
@@ -17,40 +18,10 @@ const popupImg = document.querySelector(".img-popup");
 const popupImgClose = document.querySelector(".img-popup__close");
 const cardTemplate = document.querySelector("#template").content;
 
-const initialCards = [
-  {
-    name: "Архыз",
-    link:
-      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
-  },
-  {
-    name: "Челябинская область",
-    link:
-      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg",
-  },
-  {
-    name: "Иваново",
-    link:
-      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg",
-  },
-  {
-    name: "Камчатка",
-    link:
-      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg",
-  },
-  {
-    name: "Холмогорский район",
-    link:
-      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg",
-  },
-  {
-    name: "Байкал",
-    link:
-      "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
-  },
-];
 
-const addCard = (item) => {
+
+
+const getCard = (item) => {
   const cardsItem = cardTemplate.cloneNode(true);
   const cardTitle = cardsItem.querySelector(".element__title");
   const cardImg = cardsItem.querySelector(".element__image");
@@ -65,18 +36,22 @@ const addCard = (item) => {
     .querySelector(".element__like")
     .addEventListener("click", handleLikeIcon);
 
-  cardImg.addEventListener("click", function openPhoto(evt) {
-    const photo = evt.target;
-    popupImg.querySelector(".img-popup__place").src = photo.src;
-    popupImg.querySelector(".img-popup__caption").textContent = photo.alt;
-    togglePopup(popupImg);
-  });
+  cardImg.addEventListener("click",  openPhoto);
+
 
   return cardsItem;
 };
 
+function openPhoto(evt) {
+  const photo = evt.target;
+  popupImg.querySelector(".img-popup__place").src = photo.src;
+  popupImg.querySelector(".img-popup__caption").textContent = photo.alt;
+  popupImg.querySelector(".img-popup__place").alt = photo.alt;
+  togglePopup(popupImg);
+}
+
 function renderCard(item) {
-  let element = addCard(item);
+  const element = getCard(item);
   sectionCards.prepend(element);
 }
 
@@ -102,11 +77,12 @@ function deleteElement(e) {
   element.remove();
 }
 
-initialCards.forEach(addCard);
 
 function togglePopup(elem) {
   elem.classList.toggle("popup_is-opened");
-  document.addEventListener("keydown", escHandler);
+}
+function closeTogglePopup(elem) {
+  elem.classList.remove('popup_is-opened');
 }
 
 function formSubmitHandler(evt) {
@@ -116,14 +92,13 @@ function formSubmitHandler(evt) {
   togglePopup(popup);
 }
 
-function escHandler(evt) {
-  if (evt.key === "Escape") {
-    document
-      .querySelector(".popup_is-opened")
-      .classList.remove("popup_is-opened");
-    document.removeEventListener("keydown", escHandler);
+document.addEventListener('keydown', (evt) => {
+  if (evt.key === 'Escape') {
+    if (popup.classList.contains('popup_is-opened')) {
+      closeTogglePopup(popup);
+    }
   }
-}
+});
 
 document.addEventListener("click", function (evt) {
   evt.target.classList.remove("popup_is-opened");
@@ -138,12 +113,12 @@ editButton.addEventListener("click", () => {
   infoInput.value = info.textContent;
 });
 
-popupClose.addEventListener("click", () => togglePopup(popup));
+popupClose.addEventListener("click", () => closeTogglePopup(popup));
 
 formPlace.addEventListener("submit", userCreateElement);
 
 addButton.addEventListener("click", () => togglePopup(popupImage));
 
-popupImageClose.addEventListener("click", () => togglePopup(popupImage));
+popupImageClose.addEventListener("click", () => closeTogglePopup(popupImage));
 
-popupImgClose.addEventListener("click", () => togglePopup(popupImg));
+popupImgClose.addEventListener("click", () => closeTogglePopup(popupImg));
