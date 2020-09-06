@@ -89,7 +89,7 @@ document.addEventListener('keydown', (evt) => {
     if (popup.classList.contains('popup_is-opened')) {
       togglePopup(popup);
     }
-  };
+  }
 });
 
 
