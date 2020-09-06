@@ -75,15 +75,25 @@ function userCreateElement(evt) {
 function deleteElement(e) {
   const element = e.target.closest(".element");
   element.remove();
+
+}
+function escHandler(evt) {
+  if (evt.key === "Escape") {
+    document
+        .querySelector(".popup_is-opened")
+        .classList.remove("popup_is-opened");
+  }
 }
 
 
 function togglePopup(elem) {
   elem.classList.toggle("popup_is-opened");
+  nameInput.value = name.textContent;
+  infoInput.value = info.textContent;
+  document.addEventListener("keydown", escHandler);
+  document.removeEventListener("keydown", escHandler);
 }
-function closeTogglePopup(elem) {
-  elem.classList.remove('popup_is-opened');
-}
+
 
 function formSubmitHandler(evt) {
   evt.preventDefault();
@@ -92,13 +102,7 @@ function formSubmitHandler(evt) {
   togglePopup(popup);
 }
 
-document.addEventListener('keydown', (evt) => {
-  if (evt.key === 'Escape') {
-    if (popup.classList.contains('popup_is-opened')) {
-      closeTogglePopup(popup);
-    }
-  }
-});
+
 
 document.addEventListener("click", function (evt) {
   evt.target.classList.remove("popup_is-opened");
