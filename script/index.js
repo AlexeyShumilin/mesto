@@ -117,12 +117,12 @@ editButton.addEventListener("click", () => {
   infoInput.value = info.textContent;
 });
 
-popupClose.addEventListener("click", () => closeTogglePopup(popup));
+popupClose.addEventListener("click", () => togglePopup(popup));
 
 formPlace.addEventListener("submit", userCreateElement);
 
 addButton.addEventListener("click", () => togglePopup(popupImage));
 
-popupImageClose.addEventListener("click", () => closeTogglePopup(popupImage));
+popupImageClose.addEventListener("click", () => togglePopup(popupImage));
 
-popupImgClose.addEventListener("click", () => closeTogglePopup(popupImg));
+popupImgClose.addEventListener("click", () => togglePopup(popupImg));
