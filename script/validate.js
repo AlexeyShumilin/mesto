@@ -30,6 +30,7 @@ const hasInvalidInput = (inputList) => {
     });
 };
 
+
 const toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
     if (hasInvalidInput(inputList)) {
         buttonElement.classList.add(inactiveButtonClass);
@@ -72,6 +73,7 @@ const setEventListeners = (
     });
 };
 
+
 const enableValidation = (options) => {
     const formList = Array.from(document.querySelectorAll(options.formSelector));
 
@@ -89,4 +91,10 @@ const enableValidation = (options) => {
     });
 };
 
-enableValidation(validationSetup);
+
+export default enableValidation;
+export {validationSetup};
+
+
+
+

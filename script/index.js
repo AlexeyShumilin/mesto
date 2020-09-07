@@ -1,4 +1,6 @@
 import initialCards from "./cards.js";
+import enableValidation, {validationSetup} from "./validate.js";
+
 
 const editButton = document.querySelector(".user-info__edit-button");
 const popup = document.querySelector(".popup");
@@ -79,8 +81,7 @@ function deleteElement(e) {
 
 function escHandler(evt) {
     if (evt.key === "Escape") {
-        document
-            .querySelector(".popup_is-opened")
+        document.querySelector(".popup_is-opened")
             .classList.remove("popup_is-opened");
     }
 }
@@ -89,6 +90,7 @@ function escHandler(evt) {
 function openPopup(elem) {
     elem.classList.add("popup_is-opened");
     document.addEventListener("keydown", escHandler);
+
 }
 
 function closePopup(elem) {
@@ -119,6 +121,8 @@ editButton.addEventListener("click", () => {
     openPopup(popup);
     nameInput.value = name.textContent;
     infoInput.value = info.textContent;
+    enableValidation(validationSetup);
+
 });
 
 popupClose.addEventListener("click", () => closePopup(popup));
@@ -130,3 +134,5 @@ addButton.addEventListener("click", () => openPopup(popupImage));
 popupImageClose.addEventListener("click", () => closePopup(popupImage));
 
 popupImgClose.addEventListener("click", () => closePopup(popupImg));
+
+enableValidation(validationSetup);

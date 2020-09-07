@@ -41,11 +41,11 @@
             <h3 class="popup__title">Редактировать профиль</h3>
             <input class="popup__item popup__item_name " id="author-input" maxlength="40"
                    minlength="2"
-                   name="name" pattern="[A-Za-zА-ЯЁа-яё -]{1,}" placeholder="Жак-Ив Кусто"  type="text" >
+                   name="name" pattern="[A-Za-zА-ЯЁа-яё -]{1,}" placeholder="Жак-Ив Кусто"  type="text" required >
             <span class="popup__span-error popup__span-error_active" id="author-input-error"></span>
             <input class="popup__item popup__item_job " id="about-input" maxlength="400"
                    minlength="2"
-                   name="description" placeholder="Исследователь океана"  type="text" >
+                   name="description" placeholder="Исследователь океана"  type="text" required>
             <span class="popup__span-error popup__span-error_active" id="about-input-error"></span>
             <button class="popup__save popup__save_disabled" type="submit">Сохранить</button>
         </form>
@@ -89,7 +89,7 @@
     </template>
 </div>
 <script type="module" src="script/index.js"></script>
-<script src="script/validate.js"></script>
+<script type="module" src="script/validate.js"></script>
 </body>
 
 </html>
