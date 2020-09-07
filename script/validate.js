@@ -29,7 +29,16 @@ const hasInvalidInput = (inputList) => {
         return !inputElement.validity.valid;
     });
 };
-
+const toggleButtonState = (inputList, buttonElement) => {
+  if (hasInvalidInput(inputList)) {
+    buttonElement.classList.add('popup__save_disabled');
+    buttonElement.setAttribute('disabled', true);
+  } else {
+    buttonElement.classList.remove('popup__save_disabled');
+    buttonElement.removeAttribute('disabled', false);
+  }
+};
+/*
 const toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
     if (hasInvalidInput(inputList)) {
         buttonElement.classList.add(inactiveButtonClass);
@@ -39,7 +48,7 @@ const toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
         buttonElement.disabled = false;
     }
 };
-
+*/
 const isValid = (formElement, inputElement, classElement) => {
     if (!inputElement.validity.valid) {
         openInputError(
