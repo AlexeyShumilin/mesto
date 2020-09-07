@@ -83,6 +83,7 @@ function escHandler(evt) {
     if (evt.key === "Escape") {
         document.querySelector(".popup_is-opened")
             .classList.remove("popup_is-opened");
+        document.removeEventListener("keydown", escHandler);
     }
 }
 
