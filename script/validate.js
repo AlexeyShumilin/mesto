@@ -40,7 +40,7 @@ const toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
         buttonElement.disabled = false;
     }
 };
-
+*/
 const isValid = (formElement, inputElement, classElement) => {
     if (!inputElement.validity.valid) {
         openInputError(
