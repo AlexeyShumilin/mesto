@@ -46,7 +46,7 @@ function openPhoto(evt) {
     popupImg.querySelector(".img-popup__place").src = photo.src;
     popupImg.querySelector(".img-popup__caption").textContent = photo.alt;
     popupImg.querySelector(".img-popup__place").alt = photo.alt;
-    togglePopup(popupImg);
+    openPopup(popupImg);
 }
 
 function renderCard(item) {
@@ -68,7 +68,7 @@ function userCreateElement(evt) {
     element.name = popupName.value;
     element.link = popupLink.value;
     renderCard(element);
-    togglePopup(popupImage);
+    closePopup(popupImage);
 }
 
 function deleteElement(e) {
@@ -77,32 +77,23 @@ function deleteElement(e) {
 
 }
 
-document.addEventListener('keydown', (evt) => {
-    if (evt.key === 'Escape') {
-        if (popupImage.classList.contains('popup_is-opened')) {
-            togglePopup(popupImage);
-        }
-        if (popupImg.classList.contains('popup_is-opened')) {
-            togglePopup(popupImg);
-
-        }
-        if (popup.classList.contains('popup_is-opened')) {
-            togglePopup(popup);
-        }
-    };
-});
+function escHandler(evt) {
+    if (evt.key === "Escape") {
+        document
+            .querySelector(".popup_is-opened")
+            .classList.remove("popup_is-opened");
+    }
+}
 
 
-document.addEventListener("click", function (evt) {
-    evt.target.classList.remove("popup_is-opened");
-    evt.stopPropagation();
-});
+function openPopup(elem) {
+    elem.classList.add("popup_is-opened");
+    document.addEventListener("keydown", escHandler);
+}
 
-
-function togglePopup(elem) {
-    elem.classList.toggle("popup_is-opened");
-    nameInput.value = name.textContent;
-    infoInput.value = info.textContent;
+function closePopup(elem) {
+    elem.classList.remove("popup_is-opened");
+    document.removeEventListener("keydown", escHandler);
 
 }
 
@@ -111,13 +102,13 @@ function formSubmitHandler(evt) {
     evt.preventDefault();
     name.textContent = nameInput.value;
     info.textContent = infoInput.value;
-    togglePopup(popup);
+    closePopup(popup);
 }
 
 
 document.addEventListener("click", function (evt) {
     if (evt.target.classList.contains('popup_is-opened')) {
-        togglePopup(evt.target);
+        closePopup(evt.target);
         evt.stopPropagation();
     }
 });
@@ -125,17 +116,17 @@ document.addEventListener("click", function (evt) {
 formElement.addEventListener("submit", formSubmitHandler);
 
 editButton.addEventListener("click", () => {
-    togglePopup(popup);
+    openPopup(popup);
     nameInput.value = name.textContent;
     infoInput.value = info.textContent;
 });
 
-popupClose.addEventListener("click", () => togglePopup(popup));
+popupClose.addEventListener("click", () => closePopup(popup));
 
 formPlace.addEventListener("submit", userCreateElement);
 
-addButton.addEventListener("click", () => togglePopup(popupImage));
+addButton.addEventListener("click", () => openPopup(popupImage));
 
-popupImageClose.addEventListener("click", () => togglePopup(popupImage));
+popupImageClose.addEventListener("click", () => closePopup(popupImage));
 
-popupImgClose.addEventListener("click", () => togglePopup(popupImg));
+popupImgClose.addEventListener("click", () => closePopup(popupImg));
