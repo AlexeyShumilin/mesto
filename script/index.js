@@ -1,25 +1,26 @@
 import initialCards from "./cards.js";
-import enableValidation, {validationSetup} from "./validate.js";
+import {
+    addButton,
+    cardTemplate,
+    editButton,
+    formElement,
+    formPlace,
+    info,
+    infoInput,
+    name,
+    nameInput,
+    popup,
+    popupClose,
+    popupImage,
+    popupImageClose,
+    popupImg,
+    popupImgClose,
+    popupLink,
+    popupName,
+    sectionCards
+} from "./constants.js";
 
-
-const editButton = document.querySelector(".user-info__edit-button");
-const popup = document.querySelector(".popup");
-const popupClose = document.querySelector(".popup__close");
-const formPlace = document.querySelector(".popup-add__place");
-const nameInput = document.querySelector(".popup__item_name");
-const infoInput = document.querySelector(".popup__item_job");
-const name = document.querySelector(".user-info__name");
-const info = document.querySelector(".user-info__job");
-const formElement = document.querySelector("form");
-const sectionCards = document.querySelector(".elements");
-const addButton = document.querySelector(".user-info__add-button");
-const popupImage = document.querySelector(".popup-image");
-const popupImageClose = document.querySelector(".popup__image-close");
-const popupLink = document.querySelector(".popup__input_type_link-url");
-const popupName = document.querySelector(".popup__input_type_name");
-const popupImg = document.querySelector(".img-popup");
-const popupImgClose = document.querySelector(".img-popup__close");
-const cardTemplate = document.querySelector("#template").content;
+import {cardFormValidator, editFormValidator} from "./FormValidator.js";
 
 
 const getCard = (item) => {
@@ -122,7 +123,8 @@ editButton.addEventListener("click", () => {
     openPopup(popup);
     nameInput.value = name.textContent;
     infoInput.value = info.textContent;
-    enableValidation(validationSetup);
+    editFormValidator.enableValidation();
+
 
 });
 
@@ -136,4 +138,5 @@ popupImageClose.addEventListener("click", () => closePopup(popupImage));
 
 popupImgClose.addEventListener("click", () => closePopup(popupImg));
 
-enableValidation(validationSetup);
+
+cardFormValidator.enableValidation();
