@@ -52,8 +52,9 @@ class Card {
         evt.target.classList.toggle('element__like_active');
     };
 
-    _handleDeleteCard(evt) {
-        evt.target.closest('.element').remove();
+    _handleDeleteCard() {
+        this._element.remove();
+        this._element = null;
     };
 
     _handleImageClick(evt) {
