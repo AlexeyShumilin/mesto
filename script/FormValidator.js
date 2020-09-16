@@ -1,4 +1,4 @@
-import {formPlace, popupUser, validationSetup} from './constants.js'
+import {formPlace, popupUser, validationSetup,} from './constants.js'
 
 class FormValidator {
     constructor(defaultFormConfig, formElement) {
@@ -13,16 +13,17 @@ class FormValidator {
     _showInputError(inputElement, errorMessage) {
         const errorElement = this.formElement.querySelector(`#${inputElement.id}-error`);
         inputElement.classList.add(this._inputErrorClass);
-        errorElement.classList.add(this._errorClass);
+        inputElement.classList.add(this._errorClass);
         errorElement.textContent = errorMessage;
     }
 
     _hideInputError(inputElement) {
         const errorElement = this.formElement.querySelector(`#${inputElement.id}-error`);
         inputElement.classList.remove(this._inputErrorClass);
-        errorElement.classList.remove(this._errorClass);
-        errorElement.TextContent = "";
+        inputElement.classList.remove(this._errorClass);
+        errorElement.textContent = "";
     }
+
 
     _isValid(inputElement) {
 
@@ -47,6 +48,7 @@ class FormValidator {
         submitButtons.disabled = false;
     }
 
+
     _toggleButtonState(inputs, submitButtons) {
         if (this._hasInvalidInput(inputs)) {
             this._popupButtonDisabled(submitButtons);
@@ -60,8 +62,8 @@ class FormValidator {
         const submitButtons = this.formElement.querySelector(this._submitButtonSelector);
         this._toggleButtonState(inputs, submitButtons);
 
-        inputs.forEach((inputElement) => {
-            inputElement.addEventListener('input', (evt) => {
+        inputs.forEach((inputElement,) => {
+            inputElement.addEventListener('input', () => {
                 this._isValid(inputElement);
                 this._toggleButtonState(inputs, submitButtons);
             });
@@ -75,6 +77,7 @@ class FormValidator {
         });
         this._setEventListeners();
     }
+
 }
 
 const editFormValidator = new FormValidator(validationSetup, popupUser);
