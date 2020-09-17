@@ -1,4 +1,5 @@
 import {
+    popupUser,
     addButton,
     editButton,
     formElement,
@@ -60,7 +61,7 @@ function formSubmitHandler(evt) {
     evt.preventDefault();
     name.textContent = nameInput.value;
     info.textContent = infoInput.value;
-    closePopup(popup);
+    closePopup(popupUser);
 }
 
 
@@ -75,16 +76,16 @@ document.addEventListener("click", function (evt) {
 formElement.addEventListener("submit", formSubmitHandler);
 
 editButton.addEventListener("click", () => {
-    openPopup(popup);
+    const inputEvent = new CustomEvent('input');
     nameInput.value = name.textContent;
+    nameInput.dispatchEvent(inputEvent);
     infoInput.value = info.textContent;
-    editFormValidator.enableValidation();
-
-
+    infoInput.dispatchEvent(inputEvent);
+    openPopup(popupUser);
 });
 
-function renderCard(initialCards) {
-    initialCards.forEach((data) => {
+function renderCard(card) {
+    card.forEach((data) => {
         const card = new Card(data, '.template');
         const cardElement = card.createCard();
         sectionCards.prepend(cardElement);
@@ -104,5 +105,6 @@ popupImageClose.addEventListener("click", () => closePopup(popupImage));
 popupImgClose.addEventListener("click", () => closePopup(popupImg));
 
 cardFormValidator.enableValidation();
+editFormValidator.enableValidation();
 
 export {openPopup};
