@@ -1,5 +1,5 @@
 import {openPopup,} from "./index.js";
-import {popupImg} from "./constants.js";
+import {popupImg, bigImgPopup, bigImgCaption} from "./constants.js";
 
 
 // noinspection ChainedFunctionCallJS
@@ -58,9 +58,9 @@ class Card {
 
     _handleImageClick(evt) {
         const photo = evt.target;
-        popupImg.querySelector(".img-popup__place").src = photo.src;
-        popupImg.querySelector(".img-popup__caption").textContent = photo.alt;
-        popupImg.querySelector(".img-popup__place").alt = photo.alt;
+        bigImgPopup.src = photo.src;
+        bigImgCaption.textContent = photo.alt;
+        bigImgCaption.alt = photo.alt;
         openPopup(popupImg);
     };
 }

@@ -17,6 +17,10 @@ const popupImg = document.querySelector(".img-popup");
 const popupImgClose = document.querySelector(".img-popup__close");
 const sectionCards = document.querySelector(".elements");
 
+const bigImgPopup =  popupImg.querySelector(".img-popup__place");
+const bigImgCaption = popupImg.querySelector(".img-popup__caption");
+
+
 
 const validationSetup = {
     formSelector: ".popup__container",
@@ -30,6 +34,8 @@ const validationSetup = {
 };
 
 export {
+    bigImgCaption,
+    bigImgPopup,
     sectionCards,
     validationSetup,
     editButton,
