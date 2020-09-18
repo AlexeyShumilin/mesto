@@ -1,5 +1,5 @@
 import {openPopup,} from "./index.js";
-import {popupImg, bigImgPopup, bigImgCaption} from "./constants.js";
+import {bigImgCaption, bigImgPopup, popupImg} from "./constants.js";
 
 
 // noinspection ChainedFunctionCallJS
@@ -46,6 +46,7 @@ class Card {
         cardTitle.textContent = this._name;
 
         return this._element;
+
     }
 
     _handleLikeToggle(evt) {
