@@ -25,7 +25,7 @@ import {initialCards} from "./initialCards.js";
 
 function userCreateElement(evt) {
     evt.preventDefault();
-    renderCards({
+    renderCard({
         name: popupName.value,
         link: popupLink.value
     });
@@ -82,7 +82,7 @@ editButton.addEventListener("click", () => {
     openPopup(popupUser);
 });
 
-function renderCards(data) {
+function renderCard(data) {
 
     const card = new Card(data, '.template');
     const cardElement = card.createCard();
@@ -90,7 +90,7 @@ function renderCards(data) {
 
 }
 
-initialCards.forEach(renderCards);
+initialCards.forEach(renderCard);
 
 
 popupClose.addEventListener("click", () => closePopup(popup));
