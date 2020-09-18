@@ -25,7 +25,7 @@ import {initialCards} from "./initialCards.js";
 
 function userCreateElement(evt) {
     evt.preventDefault();
-    renderCard([{
+    renderCards([{
         name: popupName.value,
         link: popupLink.value
     }]);
@@ -37,8 +37,7 @@ function userCreateElement(evt) {
 
 function escHandler(evt) {
     if (evt.key === "Escape") {
-        document.querySelector(".popup_is-opened")
-            .classList.remove("popup_is-opened");
+        closePopup(document.querySelector('.popup_is-opened'));
         document.removeEventListener("keydown", escHandler);
     }
 }
@@ -84,7 +83,7 @@ editButton.addEventListener("click", () => {
     openPopup(popupUser);
 });
 
-function renderCard(card) {
+function renderCards(card) {
     card.forEach((data) => {
         const card = new Card(data, '.template');
         const cardElement = card.createCard();
@@ -92,7 +91,7 @@ function renderCard(card) {
     });
 }
 
-renderCard(initialCards);
+renderCards(initialCards);
 
 popupClose.addEventListener("click", () => closePopup(popup));
 
