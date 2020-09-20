@@ -37,7 +37,6 @@ function userCreateElement(evt) {
 function escHandler(evt) {
     if (evt.key === "Escape") {
         closePopup(document.querySelector('.popup_is-opened'));
-        document.removeEventListener("keydown", escHandler);
     }
 }
 
