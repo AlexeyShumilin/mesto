@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Mesto</title>
-    <link href="./pages/index.css" rel="stylesheet">
+    <link href="pages/index.css" rel="stylesheet">
 </head>
 
 <body class="body">
 <div class="page">
     <header class="header">
-        <img alt="логотип Место" class="header__logo" src="./images/logo.svg">
+        <img alt="логотип Место" class="header__logo" src="images/logo.svg">
     </header>
     <main>
         <div class="profile page__profile">
@@ -54,7 +54,7 @@
 
     <section class="popup popup-image">
         <form class="popup__container popup-add__place" name="new">
-            <button class="popup__image-close" type="button"></button>
+            <button class="popup__close popup__image-close" type="button"></button>
             <h3 class="popup__title">Новое место</h3>
             <input class="popup__item popup__input_type_name " id="name-input" maxlength="30"
                    minlength="2"
@@ -71,7 +71,7 @@
 
     <section class="popup img-popup">
         <form class="img-popup__content">
-            <button class="button img-popup__close" type="button"></button>
+            <button class="popup__close button img-popup__close" type="button"></button>
             <img alt="" class="img-popup__place" src="">
             <p class="img-popup__caption"></p>
         </form>
@@ -89,7 +89,7 @@
     </template>
 </div>
 
-<script src="script/index.js" type="module"></script>
+<script src="pages/index.js" type="module"></script>
 
 
 
