@@ -1,5 +1,5 @@
-import {openPopup,} from "./index.js";
-import {bigImgCaption, bigImgPopup, popupImg} from "./constants.js";
+import {openPopup,} from "../../pages";
+import {bigImgCaption, bigImgPopup, popupImg} from "../constants.js";
 
 
 // noinspection ChainedFunctionCallJS

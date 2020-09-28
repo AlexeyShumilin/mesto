@@ -1,4 +1,4 @@
-import {formPlace, popupUser, validationSetup,} from './constants.js'
+import {formPlace, popupUser, validationSetup,} from '../constants.js'
 
 class FormValidator {
     constructor(defaultFormConfig, formElement) {

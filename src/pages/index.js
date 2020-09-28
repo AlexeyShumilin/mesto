@@ -1,3 +1,4 @@
+
 import {
     addButton,
     editButton,
@@ -17,10 +18,10 @@ import {
     popupName,
     popupUser,
     sectionCards,
-} from "./constants.js";
-import {Card} from "./Card.js";
-import {cardFormValidator, editFormValidator,} from "./FormValidator.js";
-import {initialCards} from "./initialCards.js";
+} from "../script/constants.js";
+import {Card} from "../script/components/Card.js";
+import {cardFormValidator, editFormValidator,} from "../script/components/FormValidator.js";
+import {initialCards} from "../script/initialCards.js";
 
 
 function userCreateElement(evt) {
