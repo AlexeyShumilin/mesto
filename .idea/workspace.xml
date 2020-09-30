@@ -21,8 +21,17 @@
   <component name="ChangeListManager">
     <list default="true" id="bc770b99-e6c1-4cfd-b027-a7767d19fcde" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/components/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/FormValidator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script/components/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/PopupWithForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script/components/PopupWithImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/PopupWithImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/components/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Section.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/UserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/utils/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/initialCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/utils/initialCards.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,14 +74,17 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/script/components" />
-      <recent name="$PROJECT_DIR$/src/pages" />
+      <recent name="$PROJECT_DIR$/src/script/utils" />
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/pages" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/script" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.FormValidator.js">
@@ -109,7 +121,7 @@
       <workItem from="1601032022737" duration="2248000" />
       <workItem from="1601110081327" duration="17746000" />
       <workItem from="1601234030164" duration="766000" />
-      <workItem from="1601309494765" duration="5035000" />
+      <workItem from="1601309494765" duration="28840000" />
     </task>
     <servers />
   </component>
@@ -137,6 +149,14 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="354" y="145" key="#Inspections/0.25.1440.875@0.25.1440.875" timestamp="1601134128057" />
+    <state x="478" y="182" key="#com.intellij.ide.util.MemberChooser" timestamp="1601480894280">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="478" y="182" key="#com.intellij.ide.util.MemberChooser/0.25.1440.875@0.25.1440.875" timestamp="1601480894280" />
+    <state x="464" y="304" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1601395602201">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="464" y="304" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1440.875@0.25.1440.875" timestamp="1601395602200" />
     <state width="1398" height="223" key="GridCell.Tab.0.bottom" timestamp="1600800179752">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -193,5 +213,25 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="229" y="98" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1600803246815" />
+    <state x="548" y="203" key="refactoring.ChangeSignatureDialog" timestamp="1601481941573">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="548" y="203" key="refactoring.ChangeSignatureDialog/0.25.1440.875@0.25.1440.875" timestamp="1601481941572" />
+    <state x="385" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1601402438836">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="385" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1601402438836" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/script/components/Popup.js</url>
+          <line>11</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
