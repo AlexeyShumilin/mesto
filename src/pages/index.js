@@ -1,3 +1,5 @@
+import './index.css';
+
 import {initialCards} from "../script/utils/initialCards.js";
 import Section from '../script/components/Section.js';
 import Card from '../script/components/Card.js';
