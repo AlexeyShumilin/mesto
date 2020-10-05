@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Mesto</title>
-    <link href="pages/index.css" rel="stylesheet">
+
 </head>
 
 <body class="body">
@@ -45,7 +45,7 @@
             <span class="popup__span-error popup__span-error_active" id="author-input-error"></span>
             <input class="popup__item popup__item_job " id="about-input" maxlength="400"
                    minlength="2"
-                   name="description" placeholder="Исследователь океана" required type="text">
+                   name="job" placeholder="Исследователь океана" required type="text">
             <span class="popup__span-error popup__span-error_active" id="about-input-error"></span>
             <button class="popup__save " type="submit">Сохранить</button>
         </form>
@@ -72,7 +72,7 @@
     <section class="popup img-popup">
         <form class="img-popup__content">
             <button class="popup__close button img-popup__close" type="button"></button>
-            <img alt="" class="img-popup__place" src="">
+            <img alt="" class="img-popup__place" src="#">
             <p class="img-popup__caption"></p>
         </form>
     </section>
@@ -80,7 +80,7 @@
     <template class="template">
         <div class="element">
             <button class="element__delete-icon" type="button"></button>
-            <img alt="" class="element__image" src=""/>
+            <img alt="" class="element__image" src="#"/>
             <div class="element__information">
                 <p class="element__title"></p>
                 <button class="element__like" type="button"></button>
@@ -88,10 +88,6 @@
         </div>
     </template>
 </div>
-
-<script src="pages/index.js" type="module"></script>
-
-
 
 
 </body>

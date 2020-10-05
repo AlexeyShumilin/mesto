@@ -13,9 +13,10 @@
           Удаление карточки.
           Открытие попапа с картинкой при клике на карточку.
           закрытие попапа клавишей esc.
+          сборка проекта при помощи Webpack
           
 
 
 
 ### Стэк:
-HTML/CSS(flexbox, grid), БЭМ, Javascript.
+HTML/CSS(flexbox, grid), БЭМ, Javascript, Webpack

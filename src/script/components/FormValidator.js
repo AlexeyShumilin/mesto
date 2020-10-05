@@ -1,6 +1,4 @@
-import {formPlace, popupUser, validationSetup,} from '../constants.js'
-
-class FormValidator {
+export default class FormValidator {
     constructor(defaultFormConfig, formElement) {
         this._inputSelector = defaultFormConfig.inputSelector;
         this._submitButtonSelector = defaultFormConfig.submitButtonSelector;
@@ -26,7 +24,6 @@ class FormValidator {
 
 
     _isValid(inputElement) {
-
         if (!inputElement.validity.valid) {
             this._showInputError(inputElement, inputElement.validationMessage);
         } else {
@@ -38,14 +35,14 @@ class FormValidator {
         return inputs.some((inputElement) => !inputElement.validity.valid);
     }
 
-    _popupButtonDisabled(submitButtons) {
-        submitButtons.classList.add(this._inactiveButtonClass);
-        submitButtons.disabled = true;
-    }
-
     _popupButtonActive(submitButtons) {
         submitButtons.classList.remove(this._inactiveButtonClass);
         submitButtons.disabled = false;
+    }
+
+    _popupButtonDisabled(submitButtons) {
+        submitButtons.classList.add(this._inactiveButtonClass);
+        submitButtons.disabled = true;
     }
 
 
@@ -76,18 +73,7 @@ class FormValidator {
         });
         this._setEventListeners();
     }
-
 }
-
-const editFormValidator = new FormValidator(validationSetup, popupUser);
-const cardFormValidator = new FormValidator(validationSetup, formPlace);
-
-
-export {
-    FormValidator,
-    editFormValidator,
-    cardFormValidator
-};
 
 
 
