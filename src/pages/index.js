@@ -9,8 +9,8 @@ import PopupWithForm from '../script/components/PopupWithForm.js';
 import FormValidator from '../script/components/FormValidator.js';
 
 import {
-    cardSelector,
     addButton,
+    cardSelector,
     editButton,
     formPlace,
     info,
@@ -24,38 +24,33 @@ import {
 } from "../script/utils/constants.js";
 
 
+const popupWithImage = new PopupWithImage(popupImg);
+
+function generateCard(cardItem) {
+
+    const card = new Card({
+        data: cardItem,
+        handleImageClick: function () {
+            popupWithImage.open(cardItem);
+            popupWithImage.setEventListeners();
+        }
+    }, cardSelector);
+    return card.createCard();
+}
 
 const cardList = new Section({
-        items: initialCards,
-        renderer: (cardItem) => {
-            const card = new Card({
-                data: cardItem,
-                handleImageClick: () => {
-                    const popupWithImage = new PopupWithImage(popupImg);
-                    popupWithImage.open(cardItem);
-                    popupWithImage.setEventListeners();
-                }
-            }, cardSelector);
-
-            const cardElement = card.createCard();
-            cardList.addItem(cardElement);
-        },
-    },
-    sectionCards
-);
+    items: initialCards,
+    renderer: function (cardItem) {
+        const cardElement = generateCard(cardItem);
+        this.addItem(cardElement, initialCards);
+    }
+}, sectionCards);
+cardList.render();
 
 const cardPopupWithForm = new PopupWithForm(formPlace, {
     submitCallback: function (formData) {
-        const card = new Card({
-            data: formData,
-            handleImageClick: () => {
-                const popupWithImage = new PopupWithImage(popupImg);
-                popupWithImage.open(formData);
-                popupWithImage.setEventListeners();
-            }
-        }, cardSelector);
 
-        const cardElement = card.createCard();
+        const cardElement = generateCard(formData);
         cardList.addItem(cardElement);
         cardPopupWithForm.close();
     }
@@ -68,8 +63,8 @@ const user = new UserInfo({
 
 
 const editPopupWithForm = new PopupWithForm(popupUser, {
-    submitCallback(formData) {
-        user.setUserInfo(formData);
+    submitCallback(data) {
+        user.setUserInfo(data);
         editPopupWithForm.close();
     }
 });
@@ -78,7 +73,6 @@ const editFormValidator = new FormValidator(validationSetup, popupUser);
 const cardFormValidator = new FormValidator(validationSetup, formPlace);
 
 
-cardList.render(initialCards);
 cardPopupWithForm.setEventListeners();
 editPopupWithForm.setEventListeners();
 
