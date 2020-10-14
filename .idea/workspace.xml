@@ -20,10 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc770b99-e6c1-4cfd-b027-a7767d19fcde" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/script/components/Api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/components/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/FormValidator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/PopupWithForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/components/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Section.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/utils/constants.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +76,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -120,7 +126,10 @@
       <workItem from="1601524227672" duration="69000" />
       <workItem from="1601823419763" duration="3426000" />
       <workItem from="1601898588295" duration="2278000" />
-      <workItem from="1601900994910" duration="8465000" />
+      <workItem from="1601900994910" duration="34514000" />
+      <workItem from="1602257104012" duration="1185000" />
+      <workItem from="1602258303802" duration="1840000" />
+      <workItem from="1602400602349" duration="14048000" />
     </task>
     <servers />
   </component>
@@ -148,6 +157,14 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="354" y="145" key="#Inspections/0.25.1440.875@0.25.1440.875" timestamp="1601134128057" />
+    <state x="460" y="77" key="#JavaScript" timestamp="1602269834641">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="460" y="77" key="#JavaScript/0.0.1440.900@0.0.1440.900" timestamp="1602269834641" />
+    <state x="320" y="95" key="#Plugins" timestamp="1602257150452">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="95" key="#Plugins/0.0.1440.900@0.0.1440.900" timestamp="1602257150452" />
     <state x="427" y="247" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601902294200">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -157,10 +174,18 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="478" y="182" key="#com.intellij.ide.util.MemberChooser/0.25.1440.875@0.25.1440.875" timestamp="1601480894280" />
+    <state x="408" y="190" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602257007395">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="408" y="190" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1602257007395" />
     <state x="464" y="304" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1601395602201">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="464" y="304" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1440.875@0.25.1440.875" timestamp="1601395602200" />
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1602703744061">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1602703744061" />
     <state width="1398" height="249" key="GridCell.Tab.0.bottom" timestamp="1601900908266">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -217,19 +242,44 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="537" y="85" key="RollbackChangesDialog/0.25.1440.875@0.25.1440.875" timestamp="1600803293304" />
-    <state x="229" y="75" key="SettingsEditor" timestamp="1601903493197">
+    <state x="458" y="62" key="SettingsEditor" timestamp="1602270067142">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="229" y="75" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1601903493197" />
+    <state x="458" y="62" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1602270067142" />
     <state x="229" y="98" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1600803246815" />
-    <state x="548" y="203" key="refactoring.ChangeSignatureDialog" timestamp="1601486167729">
-      <screen x="0" y="25" width="1440" height="875" />
-    </state>
-    <state x="548" y="203" key="refactoring.ChangeSignatureDialog/0.25.1440.875@0.25.1440.875" timestamp="1601486167729" />
-    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup" timestamp="1601903527565">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1602270365854">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1601903527565" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1602270365854" />
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.RecentChangeDialog" timestamp="1602256927102">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.RecentChangeDialog/0.0.1440.900@0.0.1440.900" timestamp="1602256927102" />
+    <state x="524" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602270377251">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="524" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1602270377251" />
+    <state x="479" y="85" key="git4idea.branch.GitSmartOperationDialog" timestamp="1602703748144">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="479" y="85" key="git4idea.branch.GitSmartOperationDialog/0.0.1440.900@0.0.1440.900" timestamp="1602703748144" />
+    <state x="370" y="185" width="700" height="530" key="recent.locations.popup" timestamp="1602270244565">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="370" y="185" width="700" height="530" key="recent.locations.popup/0.0.1440.900@0.0.1440.900" timestamp="1602270244565" />
+    <state x="548" y="183" key="refactoring.ChangeSignatureDialog" timestamp="1601996815720">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="548" y="183" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1601996815720" />
+    <state x="548" y="203" key="refactoring.ChangeSignatureDialog/0.25.1440.875@0.25.1440.875" timestamp="1601486167729" />
+    <state x="385" y="210" key="run.anything.popup" timestamp="1602256717625">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1602256717625" />
+    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup" timestamp="1602256730552">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="194" width="670" height="696" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1602256730552" />
     <state x="385" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1601402438836" />
     <state x="450" y="320" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1601899476082">
       <screen x="0" y="0" width="1440" height="900" />

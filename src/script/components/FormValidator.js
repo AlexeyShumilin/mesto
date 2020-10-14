@@ -22,6 +22,15 @@ export default class FormValidator {
         errorElement.textContent = "";
     }
 
+    _resetForm () {
+        const formInputs = this._inputSelector.querySelectorAll('.popup__item');
+        formInputs.forEach(inputElement => {
+            this._hideInputError(inputElement);
+        });
+        this._submitButtonSelector.classList.add(this.formElement.inactiveButtonClass);
+        this._submitButtonSelector.setAttribute('disabled', '');
+    }
+
 
     _isValid(inputElement) {
         if (!inputElement.validity.valid) {
@@ -53,6 +62,7 @@ export default class FormValidator {
             this._popupButtonActive(submitButtons);
         }
     }
+
 
     _setEventListeners() {
         const inputs = Array.from(this.formElement.querySelectorAll(this._inputSelector));

@@ -10,6 +10,12 @@ const addButton = document.querySelector(".user-info__add-button");
 const popupImg = document.querySelector(".img-popup");
 const sectionCards = document.querySelector(".elements");
 const cardSelector = document.querySelector(".template");
+const popupAvatarButton = document.querySelector('.profile__avatar');
+const popupSaveButton = document.querySelector('.popup__save');
+const avatarInput = document.querySelector('.popup__text_type_avatar');
+const popupSubmitButtonAvatar = document.querySelector('.popup__submit');
+const popupAvatar = document.querySelector('.popup_type_avatar');
+
 
 
 const validationSetup = {
@@ -24,6 +30,11 @@ const validationSetup = {
 };
 
 export {
+    popupAvatar,
+    popupSubmitButtonAvatar,
+    avatarInput,
+    popupSaveButton,
+    popupAvatarButton,
     cardSelector,
     sectionCards,
     validationSetup,

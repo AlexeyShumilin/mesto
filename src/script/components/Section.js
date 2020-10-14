@@ -1,8 +1,9 @@
 export default class Section {
-    constructor({items, renderer}, containerSelector) {
+    constructor({items, renderer}, containerSelector, api) {
         this._items = items;
         this._renderer = renderer;
         this._container = containerSelector;
+        this._api = api;
     }
 
     render() {
@@ -12,11 +13,8 @@ export default class Section {
     }
 
 
-    addItem(element, isArray) {
-        if (isArray) {
-            this._container.append(element);
-        } else {
+    addItem(element) {
             this._container.prepend(element);
-        }
+
     }
 }
