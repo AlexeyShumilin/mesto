@@ -1,5 +1,5 @@
 export default class UserInfo {
-    constructor({nameSelector, jobSelector}) {
+    constructor({nameSelector,  jobSelector}) {
         this._userName = nameSelector;
         this._userJob = jobSelector;
     }
@@ -11,7 +11,7 @@ export default class UserInfo {
         };
     }
 
-    setUserInfo({name, job}) {
+    setUserInfo({name,  job}) {
         this._userName.textContent = name;
         this._userJob.textContent = job;
     }
