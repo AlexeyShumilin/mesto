@@ -1,20 +1,18 @@
 export default class Section {
-    constructor({items, renderer}, containerSelector, api) {
-        this._items = items;
+    constructor({renderer}, sectionCards) {
         this._renderer = renderer;
-        this._container = containerSelector;
-        this._api = api;
+        this._sectionCards = sectionCards;
     }
 
-    render() {
-        this._items.forEach((item) => {
-            this._renderer(item)
-        });
-    }
-
-
+    //Добавление карточки в контейнер
     addItem(element) {
-            this._container.prepend(element);
+        this._sectionCards.prepend(element);
+    }
 
+    //Отрисовка  элементов
+    renderItems(items) {
+        items.forEach(item => {
+            this._renderer(item);
+        });
     }
 }

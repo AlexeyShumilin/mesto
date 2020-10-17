@@ -1,99 +1,90 @@
 export default class Api {
-    constructor({baseUrl, headers}) {
-        this._baseUrl = baseUrl;
-        this._headers = headers;
+
+    constructor(options) {
+        this._headers = options.headers;
+        this._baseUrl = options.baseUrl;
     }
 
-    _getResponse(res) {
-        if (!res.ok) {
-            return Promise.reject(`ошибка ${res.status}`);
-        }
-        return res.json();
+    _getResponseData(url, init) {
+        return fetch(url, init)
+            .then((res) => {
+                if (res.ok) {
+                    return res.json();
+                }
+                return Promise.reject(`Произошла шибка ${res.status} - ${res.statusText}`)
+            })
     }
 
-    //запрос информации с сервера о данных пользователя
-    getInfo() {
-        return fetch(`${this._baseUrl}/users/me`, {
-            headers: this._headers
-        })
-            .then(this._getResponse);
-    }
-
-    //отправка новых данных о пользователе на сервер
-    setInfo({inputValues}) {
-        return fetch(`${this._baseUrl}/users/me`, {
+    //редактирование профиля
+    editProfileInfo(data) {
+        return this._getResponseData(`${this._baseUrl}/users/me`, {
             method: 'PATCH',
             headers: this._headers,
             body: JSON.stringify({
-                name: inputValues.name,
-                about: inputValues.description
+                name: data.name,
+                about: data.about
             })
         })
-            .then(this._getResponse);
     }
 
-    //Изменение аватарки на сервере
-    changeAvatar(avatarLink) {
-        return fetch(`${this._baseUrl}/users/me/avatar`, {
-            method: 'PUT',
-            headers: this._headers,
-            body: JSON.stringify({
-                avatar: avatarLink,
-            })
-        })
-            .then(this._getResponse);
-    }
-
-    //запрос данных с сервера для получения карточек
-    getCards() {
-        return fetch(`${this._baseUrl}/cards`, {
+    //запрос данных профиля
+    getProfileInfo() {
+        return this._getResponseData(`${this._baseUrl}/users/me`, {
             headers: this._headers
         })
-            .then(this._getResponse);
     }
 
-    //сбор всех данных для загрузки страницы
-    getData() {
-        return Promise.all([this.getInfo(), this.getCards()]);
+    //изменение аватара
+    editAvatar(avatarLink) {
+        return this._getResponseData(`${this._baseUrl}/users/me/avatar`, {
+            method: 'PATCH',
+            headers: this._headers,
+            body: JSON.stringify({
+                avatar: avatarLink
+            })
+        })
     }
 
-    //добавление карточки на сервер
-    addCard({data}) {
-        return fetch(`${this._baseUrl}/cards `, {
+    //отправка данных карточки
+    createNewCard(cardInfo) {
+        return this._getResponseData(`${this._baseUrl}/cards`, {
             method: 'POST',
             headers: this._headers,
             body: JSON.stringify({
-                name: data.name,
-                link: data.link
+                name: cardInfo.name,
+                link: cardInfo.link
             })
         })
-            .then(this._getResponse);
     }
 
-    //удаление карточки с сервера
-    deleteCard(id) {
-        return fetch(`${this._baseUrl}/cards/${id} `, {
+    //удаление карточки
+    deleteCard(cardId) {
+        return this._getResponseData(`${this._baseUrl}/cards/${cardId}`, {
             method: 'DELETE',
             headers: this._headers
         })
-            .then(this._getResponse);
     }
 
-    //Установка лайка
-    addLike(Id) {
-        return fetch(`${this._baseUrl}/cards/likes/${Id} `, {
+    // лайк
+    setLike(cardId) {
+        return this._getResponseData(`${this._baseUrl}/cards/likes/${cardId}`, {
             method: 'PUT',
             headers: this._headers
         })
-            .then(this._getResponse);
     }
 
-//удаление лайка с сервера
-    removeLike(Id) {
-        return fetch(`${this._baseUrl}/cards/likes/${Id} `, {
+    //удаляем лайк
+    removeLike(cardId) {
+        return this._getResponseData(`${this._baseUrl}/cards/likes/${cardId}`, {
             method: 'DELETE',
+            headers: this._headers,
+        })
+    }
+
+    //запрос массива карточек
+    getInitialCards() {
+        return this._getResponseData(`${this._baseUrl}/cards`, {
             headers: this._headers
         })
-            .then(this._getResponse);
     }
 }

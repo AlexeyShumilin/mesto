@@ -11,26 +11,16 @@ export default class FormValidator {
     _showInputError(inputElement, errorMessage) {
         const errorElement = this.formElement.querySelector(`#${inputElement.id}-error`);
         inputElement.classList.add(this._inputErrorClass);
-        inputElement.classList.add(this._errorClass);
+        errorElement.classList.add(this._errorClass);
         errorElement.textContent = errorMessage;
     }
 
     _hideInputError(inputElement) {
         const errorElement = this.formElement.querySelector(`#${inputElement.id}-error`);
         inputElement.classList.remove(this._inputErrorClass);
-        inputElement.classList.remove(this._errorClass);
+        errorElement.classList.remove(this._errorClass);
         errorElement.textContent = "";
     }
-
-    _resetForm () {
-        const formInputs = this._inputSelector.querySelectorAll('.popup__item');
-        formInputs.forEach(inputElement => {
-            this._hideInputError(inputElement);
-        });
-        this._submitButtonSelector.classList.add(this.formElement.inactiveButtonClass);
-        this._submitButtonSelector.setAttribute('disabled', '');
-    }
-
 
     _isValid(inputElement) {
         if (!inputElement.validity.valid) {

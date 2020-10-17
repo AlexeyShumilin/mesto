@@ -20,16 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc770b99-e6c1-4cfd-b027-a7767d19fcde" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/script/components/Api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/i.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/components/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script/components/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/FormValidator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/PopupWithForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/components/PopupWithSubmit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/PopupWithSubmit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script/components/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Section.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/utils/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/UserInfo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
