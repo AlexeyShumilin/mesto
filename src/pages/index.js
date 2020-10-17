@@ -1,4 +1,4 @@
-import './index.css';
+//import './index.css';
 import Section         from '../script/components/Section.js';
 import Card            from '../script/components/Card.js';
 import UserInfo        from '../script/components/UserInfo.js';
@@ -19,15 +19,15 @@ import {
     infoInput,
     name,
     nameInput,
-    popupAvatar,
-    popupAvatarButton,
+    popupavatar,
+    popupavatarButton,
     popupImg,
     popupSubmit,
     popupSubmitButtonAvatar,
     popupUser,
     popupUserSaveButton,
     sectionCards,
-    validationContainers,
+    validationConteiners,
     validationSetup
 } from "../script/utils/constants.js";
 
@@ -47,14 +47,15 @@ function renderLoading(isLoading, submitButton) {
     submitButton.textContent = isLoading ? 'Сохранение...' : 'Сохранить';
 }
 
+
 // экземпляр класса PopupWithForm для  редактирования профиля
-const userEditForm = new PopupWithForm(popupUser, {
+const userDataForm = new PopupWithForm(popupUser, {
     submitCallback(userInfo) {
         renderLoading(true, popupUserSaveButton)
         api.editProfileInfo({name: userInfo.name, about: userInfo.about})
             .then((data) => {
-                userData.setUserData({userName: data.name, userDescription: data.about})
-                userEditForm.close();
+                userData.setUserInfo({userName: data.name, userDescription: data.about})
+                userDataForm.close();
             })
             .catch(err => console.log(err))
             .finally(() => renderLoading(false, popupUserSaveButton));
@@ -67,21 +68,21 @@ const user = {
 
 const userData = new UserInfo(user);
 
-// заполняем поля ввода формы редактирования профиля
+//при открытии формы редактирования пользователя читаем данные со страницы, заполняем поля ввода формы
 const openUserInfoForm = () => {
     const userInfo = userData.getUserInfo();
     nameInput.value = userInfo.userName;
     infoInput.value = userInfo.userDescription;
-    userEditForm.open();
+    userDataForm.open();
 }
 
 //Создание попапа для аватара
-const avatarEditForm = new PopupWithForm(popupAvatar, {
+const avatarEditForm = new PopupWithForm(popupavatar, {
     submitCallback: () => {
         renderLoading(true, popupSubmitButtonAvatar);
         api.editAvatar(avatarInput.value)
             .then(data => {
-                popupAvatarButton.style.backgroundImage = `url('${data.avatar}')`;
+                popupavatarButton.style.backgroundImage = `url('${data.avatar}')`;
                 avatarEditForm.close();
             })
             .catch(err => console.log(err))
@@ -90,6 +91,7 @@ const avatarEditForm = new PopupWithForm(popupAvatar, {
 });
 
 const popupWithImage = new PopupWithImage(popupImg);
+//создаем экземпляр класса PopupWithImage
 
 
 //создаем экземпляр класса Section
@@ -132,14 +134,15 @@ const createCard = item => {
 }
 
 //создаем экземпляр класса PopupWithForm для формы добавления карточки
-const cardAddForm = new PopupWithForm(formPlace,
+
+const imageAddForm = new PopupWithForm(formPlace,
     {
         submitCallback: (imageInfo) => {
             renderLoading(true, formPlaceSubmitButton);
             api.createNewCard(imageInfo)
                 .then((data) => {
                     section.addItem(createCard(data))
-                    cardAddForm.close();
+                    imageAddForm.close();
                 })
                 .catch(err => console.log(err))
                 .finally(() => renderLoading(false, formPlaceSubmitButton));
@@ -147,7 +150,9 @@ const cardAddForm = new PopupWithForm(formPlace,
     }
 );
 
+
 //Создаем экземпляр класса для подтверждения удаления карточки
+
 const cardDeleteSubmit = new PopupWithSubmit(popupSubmit, {
     submitCallback: (item) =>
         api.deleteCard(item._id)
@@ -165,26 +170,26 @@ Promise.all([
 ])
     .then(values => {
         const [userInfo, cards] = values;
-        userData.setUserData({userName: userInfo.name, userDescription: userInfo.about});
+        userData.setUserInfo({userName: userInfo.name, userDescription: userInfo.about});
         userId = userInfo._id;
-        popupAvatarButton.style.backgroundImage = `url('${userInfo.avatar}')`;//записываем свой id в переменную
+        popupavatarButton.style.backgroundImage = `url('${userInfo.avatar}')`;//записываем свой id в переменную
         section.renderItems(cards.reverse());
     })
     .catch(err => {
         console.log(err);
     });
 
-validationContainers.forEach(formElement => {
+validationConteiners.forEach(formElement => {
     const newValidator = new FormValidator(validationSetup, formElement);
     newValidator.enableValidation();                                                                //включаем валидацию формы
 });
 
 avatarEditForm.setEventListeners();
-userEditForm.setEventListeners();
+userDataForm.setEventListeners();
 popupWithImage.setEventListeners();
-cardAddForm.setEventListeners();
+imageAddForm.setEventListeners();
 cardDeleteSubmit.setEventListeners();
 
-addButton.addEventListener('click', () => cardAddForm.open());
+addButton.addEventListener('click', () => imageAddForm.open());
 editButton.addEventListener('click', openUserInfoForm);
-popupAvatarButton.addEventListener('click', () => avatarEditForm.open());
+popupavatarButton.addEventListener('click', () => avatarEditForm.open());
