@@ -21,6 +21,9 @@ const avatarInput = popupavatar.querySelector('.popup__Item_type_avatar');
 const popupSubmitButtonAvatar = popupavatar.querySelector('.popup__save');
 
 const validationConteiners = Array.from(document.querySelectorAll('.popup__container'));
+<<<<<<< HEAD
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
+=======
 >>>>>>> parent of 7405a3a... finish work 9 first rewiew
 
 
@@ -37,7 +40,10 @@ const validationSetup = {
 
 export {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
     validationConteiners,
     formPlaceSubmitButton,
     popupSubmit,
@@ -46,6 +52,9 @@ export {
     avatarInput,
     popupUserSaveButton,
     popupavatarButton,
+<<<<<<< HEAD
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
+=======
 >>>>>>> parent of 7405a3a... finish work 9 first rewiew
     cardSelector,
     sectionCards,

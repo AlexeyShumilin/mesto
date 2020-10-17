@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import './index.css';
 
 import {initialCards} from "../script/utils/initialCards.js";
@@ -9,6 +10,8 @@ import PopupWithImage from '../script/components/PopupWithImage.js';
 import PopupWithForm from '../script/components/PopupWithForm.js';
 import FormValidator from '../script/components/FormValidator.js';
 =======
+=======
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
 //import './index.css';
 import Section         from '../script/components/Section.js';
 import Card            from '../script/components/Card.js';
@@ -30,6 +33,11 @@ import {
     name,
     nameInput,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    popupavatar,
+    popupavatarButton,
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
 =======
     popupavatar,
     popupavatarButton,
@@ -38,6 +46,10 @@ import {
     popupUser,
     sectionCards,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    validationConteiners,
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
 =======
     validationConteiners,
 >>>>>>> parent of 7405a3a... finish work 9 first rewiew
@@ -59,6 +71,7 @@ function generateCard(cardItem) {
     }, cardSelector);
     return card.createCard();
 =======
+
 
 // экземпляр класса PopupWithForm для  редактирования профиля
 const userDataForm = new PopupWithForm(popupUser, {
@@ -98,6 +111,7 @@ const cardPopupWithForm = new PopupWithForm(formPlace, {
     }
 });
 
+<<<<<<< HEAD
 const user = new UserInfo({
     nameSelector: name,
     jobSelector: info
@@ -110,6 +124,8 @@ const editPopupWithForm = new PopupWithForm(popupUser, {
         editPopupWithForm.close();
     }
 =======
+=======
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
 //при открытии формы редактирования пользователя читаем данные со страницы, заполняем поля ввода формы
 const openUserInfoForm = () => {
     const userInfo = userData.getUserInfo();
@@ -257,4 +273,7 @@ cardDeleteSubmit.setEventListeners();
 addButton.addEventListener('click', () => imageAddForm.open());
 editButton.addEventListener('click', openUserInfoForm);
 popupavatarButton.addEventListener('click', () => avatarEditForm.open());
+<<<<<<< HEAD
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
+=======
 >>>>>>> parent of 7405a3a... finish work 9 first rewiew
