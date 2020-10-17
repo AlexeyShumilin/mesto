@@ -21,22 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bc770b99-e6c1-4cfd-b027-a7767d19fcde" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/element/__image/element__image.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__image/element__image.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/element/__like-number/element__like-number.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__like-number/element__like-number.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/element/__like/_clicked/element__like_clicked.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__like/_active/element__like_active.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/element/__like/element__like.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__like/element__like.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/components/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/components/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/UserInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/utils/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/utils/initialCards.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +130,7 @@
       <workItem from="1602938310916" duration="2518000" />
       <workItem from="1602940900288" duration="21000" />
       <workItem from="1602940953140" duration="699000" />
-      <workItem from="1602942229802" duration="3109000" />
+      <workItem from="1602942229802" duration="3788000" />
     </task>
     <servers />
   </component>
