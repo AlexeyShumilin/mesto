@@ -1,18 +1,20 @@
+
 .element__delete-icon {
-    background: transparent url(../../../images/delete-icon.svg) no-repeat center;
+    display: none;
+    background-image: url("../../../images/delete-icon.svg");
+    background-color: rgba(128, 128, 128, .2);
+    background-repeat: no-repeat;
     border: none;
-    width: 18px;
-    height: 20px;
-    padding-right: 11px;
-    padding-top: 24px;
-    cursor: pointer;
-    visibility: hidden;
+    border-radius: 20%;
+    background-position: center;
+    height: 30px;
+    width: 30px;
     position: absolute;
-    top: 18px;
     right: 15px;
+    top: 18px;
 }
 
-.element:hover .element__delete-icon {
-    visibility: visible;
+.element__delete-icon:hover {
+    opacity: 0.6;
+    cursor: pointer;
 }
-

@@ -21,12 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="bc770b99-e6c1-4cfd-b027-a7767d19fcde" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/avatar-edit.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/avatar-edit.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/components/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/components/PopupWithSubmit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/PopupWithSubmit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/utils/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/__delete-icon/element__delete-icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__delete-icon/element__delete-icon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/__like-number/cards__like-number.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__like-number/element__like-number.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/__like/_active/element__like_active.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/__like/element__like.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__like/element__like.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/page/__profile/pege__profile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/user-info/__job/user-info__job.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +129,7 @@
       <workItem from="1602258303802" duration="1840000" />
       <workItem from="1602400602349" duration="14048000" />
       <workItem from="1602938232001" duration="28000" />
-      <workItem from="1602938310916" duration="1011000" />
+      <workItem from="1602938310916" duration="1695000" />
     </task>
     <servers />
   </component>
