@@ -20,16 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc770b99-e6c1-4cfd-b027-a7767d19fcde" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/i.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/avatar-edit.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/avatar-edit.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script/components/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/components/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/FormValidator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/PopupWithForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script/components/PopupWithSubmit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/PopupWithSubmit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/components/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Section.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/UserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/utils/constants.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +127,8 @@
       <workItem from="1602257104012" duration="1185000" />
       <workItem from="1602258303802" duration="1840000" />
       <workItem from="1602400602349" duration="14048000" />
+      <workItem from="1602938232001" duration="28000" />
+      <workItem from="1602938310916" duration="1011000" />
     </task>
     <servers />
   </component>
@@ -259,10 +258,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="524" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1602270377251" />
-    <state x="479" y="85" key="git4idea.branch.GitSmartOperationDialog" timestamp="1602703748144">
+    <state x="479" y="85" key="git4idea.branch.GitSmartOperationDialog" timestamp="1602938449099">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="479" y="85" key="git4idea.branch.GitSmartOperationDialog/0.0.1440.900@0.0.1440.900" timestamp="1602703748144" />
+    <state x="479" y="85" key="git4idea.branch.GitSmartOperationDialog/0.0.1440.900@0.0.1440.900" timestamp="1602938449099" />
     <state x="370" y="185" width="700" height="530" key="recent.locations.popup" timestamp="1602270244565">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

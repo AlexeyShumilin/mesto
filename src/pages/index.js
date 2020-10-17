@@ -42,13 +42,13 @@ const api = new Api({
     }
 });
 
-//функция указания загрузки с сервера
+//функция  для указания загрузки с сервера
 function renderLoading(isLoading, submitButton) {
     submitButton.textContent = isLoading ? 'Сохранение...' : 'Сохранить';
 }
 
 
-// экземпляр PopupWithForm для редактирования профиля
+// экземпляр класса PopupWithForm для  редактирования профиля
 const userDataForm = new PopupWithForm(popupUser, {
     submitCallback(userInfo) {
         renderLoading(true, popupUserSaveButton)
@@ -68,7 +68,7 @@ const user = {
 
 const userData = new UserInfo(user);
 
-// заполняем поля ввода формы пользователя при открытии попапа редактирования профиля
+//при открытии формы редактирования пользователя читаем данные со страницы, заполняем поля ввода формы
 const openUserInfoForm = () => {
     const userInfo = userData.getUserInfo();
     nameInput.value = userInfo.userName;
@@ -76,10 +76,22 @@ const openUserInfoForm = () => {
     userDataForm.open();
 }
 
-
+//Создание попапа для аватара
+const avatarEditForm = new PopupWithForm(popupavatar, {
+    submitCallback: () => {
+        renderLoading(true, popupSubmitButtonAvatar);
+        api.editAvatar(avatarInput.value)
+            .then(data => {
+                popupavatarButton.style.backgroundImage = `url('${data.avatar}')`;
+                avatarEditForm.close();
+            })
+            .catch(err => console.log(err))
+            .finally(() => renderLoading(false, popupSubmitButtonAvatar));
+    }
+});
 
 const popupWithImage = new PopupWithImage(popupImg);
-
+//создаем экземпляр класса PopupWithImage
 
 
 //создаем экземпляр класса Section
@@ -152,8 +164,27 @@ const cardDeleteSubmit = new PopupWithSubmit(popupSubmit, {
 });
 
 
+Promise.all([
+    api.getProfileInfo(),
+    api.getInitialCards()
+])
+    .then(values => {
+        const [userInfo, cards] = values;
+        userData.setUserInfo({userName: userInfo.name, userDescription: userInfo.about});
+        userId = userInfo._id;
+        popupavatarButton.style.backgroundImage = `url('${userInfo.avatar}')`;//записываем свой id в переменную
+        section.renderItems(cards.reverse());
+    })
+    .catch(err => {
+        console.log(err);
+    });
 
+validationConteiners.forEach(formElement => {
+    const newValidator = new FormValidator(validationSetup, formElement);
+    newValidator.enableValidation();                                                                //включаем валидацию формы
+});
 
+avatarEditForm.setEventListeners();
 userDataForm.setEventListeners();
 popupWithImage.setEventListeners();
 imageAddForm.setEventListeners();
@@ -161,4 +192,4 @@ cardDeleteSubmit.setEventListeners();
 
 addButton.addEventListener('click', () => imageAddForm.open());
 editButton.addEventListener('click', openUserInfoForm);
-
+popupavatarButton.addEventListener('click', () => avatarEditForm.open());

@@ -1,8 +1,8 @@
 export default class Api {
 
     constructor(options) {
-        this._headers = options.headers;
-        this._baseUrl = options.baseUrl;
+        this._headers = options.headers;            //Передаем заголовок
+        this._baseUrl = options.baseUrl;            //Передаем базовый URL
     }
 
     _getResponseData(url, init) {
@@ -34,7 +34,7 @@ export default class Api {
         })
     }
 
-    //изменение аватара
+    //редактирование аватара
     editAvatar(avatarLink) {
         return this._getResponseData(`${this._baseUrl}/users/me/avatar`, {
             method: 'PATCH',
@@ -45,7 +45,7 @@ export default class Api {
         })
     }
 
-    //отправка данных карточки
+    //отправка данных о новой карточке
     createNewCard(cardInfo) {
         return this._getResponseData(`${this._baseUrl}/cards`, {
             method: 'POST',
@@ -65,7 +65,7 @@ export default class Api {
         })
     }
 
-    // лайк
+    //ставим лайк
     setLike(cardId) {
         return this._getResponseData(`${this._baseUrl}/cards/likes/${cardId}`, {
             method: 'PUT',
