@@ -25,9 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc770b99-e6c1-4cfd-b027-a7767d19fcde" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bc770b99-e6c1-4cfd-b027-a7767d19fcde" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,7 +166,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add classes Popup and Popup with form &#10;file structure changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="add classes Popup and Popup with form &#10;file structure changed" />
+    <MESSAGE value="like" />
+    <option name="LAST_COMMIT_MESSAGE" value="like" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="145" key="#Inspections" timestamp="1601134128057">
@@ -205,25 +204,25 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1602703744061" />
-    <state width="1398" height="249" key="GridCell.Tab.0.bottom" timestamp="1601900908266">
+    <state width="1398" height="250" key="GridCell.Tab.0.bottom" timestamp="1602953499633">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="249" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1601900908266" />
+    <state width="1398" height="250" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1602953499633" />
     <state width="1398" height="223" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1600800179752" />
-    <state width="1398" height="249" key="GridCell.Tab.0.center" timestamp="1601900908263">
+    <state width="1398" height="250" key="GridCell.Tab.0.center" timestamp="1602953499631">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="249" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1601900908263" />
+    <state width="1398" height="250" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1602953499631" />
     <state width="1398" height="223" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1600800179750" />
-    <state width="1398" height="249" key="GridCell.Tab.0.left" timestamp="1601900908262">
+    <state width="1398" height="250" key="GridCell.Tab.0.left" timestamp="1602953499631">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="249" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1601900908262" />
+    <state width="1398" height="250" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1602953499631" />
     <state width="1398" height="223" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1600800179749" />
-    <state width="1398" height="249" key="GridCell.Tab.0.right" timestamp="1601900908265">
+    <state width="1398" height="250" key="GridCell.Tab.0.right" timestamp="1602953499632">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="249" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1601900908265" />
+    <state width="1398" height="250" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1602953499632" />
     <state width="1398" height="223" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1600800179751" />
     <state width="1398" height="185" key="GridCell.Tab.1.bottom" timestamp="1600785803409">
       <screen x="0" y="25" width="1440" height="875" />
@@ -270,6 +269,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1602270365854" />
+    <state x="320" y="183" key="Vcs.Push.Dialog.v2" timestamp="1602953310368">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="183" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1602953310368" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.RecentChangeDialog" timestamp="1602256927102">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
