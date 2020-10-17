@@ -6,25 +6,23 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Mesto</title>
 
-
 </head>
 
 <body class="body">
 <div class="page">
     <header class="header">
-        <img alt="логотип Место" class="header__logo" src="./images/logo.svg">
+        <img alt="логотип Место" class="header__logo" src="images/logo.svg">
     </header>
     <main>
         <div class="profile page__profile">
-            <div class="profile__avatar avatar">
-            </div>
+            <div class="profile__avatar"></div>
             <div class="user-info">
                 <div class="user-info__data">
                     <div class="user-info__name-data">
                         <h1 class="user-info__name">Жак-Ив Кусто</h1>
                         <button class=" button user-info__edit-button" type="button"></button>
                     </div>
-                    <p class="user-info__about">Исследователь океана</p>
+                    <p class="user-info__job">Исследователь океана</p>
                 </div>
                 <button class="button user-info__add-button" type="button"></button>
             </div>
@@ -43,13 +41,13 @@
             <h3 class="popup__title">Редактировать профиль</h3>
             <input class="popup__item popup__item_name " id="author-input" maxlength="40"
                    minlength="2"
-                   name="name" pattern="[A-Za-zА-ЯЁа-яё -]{1,}" placeholder="Имя" required type="text">
+                   name="name" pattern="[A-Za-zА-ЯЁа-яё -]{1,}" placeholder="Жак-Ив Кусто" required type="text">
             <span class="popup__span-error popup__span-error_active" id="author-input-error"></span>
             <input class="popup__item popup__item_job " id="about-input" maxlength="400"
                    minlength="2"
-                   name="about" placeholder="О себе" required type="text">
+                   name="job" placeholder="Исследователь океана" required type="text">
             <span class="popup__span-error popup__span-error_active" id="about-input-error"></span>
-            <button class="popup__save" type="submit">Сохранить</button>
+            <button class="popup__save " type="submit">Сохранить</button>
         </form>
 
     </section>
@@ -79,44 +77,17 @@
         </form>
     </section>
 
-    <section class="popup avatar-popup">
-        <form class="popup__container" name="popup-avatar" novalidate>
-            <h2 class="popup__title">Обновить аватар</h2>
-
-            <input class="popup__item popup__Item_type_avatar" id="avatar-input" name="avatar"
-                   placeholder="Ссылка на новый аватар" required type="url">
-            <span class="popup__span-error popup__span-error_active" id="avatar-input-error"></span>
-
-            <button class="popup__save popup__avatar" disabled type="submit">Сохранить</button>
-            <button class="popup__close" type="button"></button>
-        </form>
-    </section>
-
-    <section class="popup submit-popup">
-        <form class="popup__container" name="popup-submit" novalidate>
-            <h2 class="popup__title">Вы уверены?</h2>
-            <button class="popup__save" type="submit">Да</button>
-            <button class="popup__close" type="button"></button>
-        </form>
-    </section>
-    <template class="template" id="place-card">
-        <div class="element" id="#">
+    <template class="template">
+        <div class="element">
             <button class="element__delete-icon" type="button"></button>
-            <img alt="Фото" class="element__image" src="#"/>
+            <img alt="" class="element__image" src="#"/>
             <div class="element__information">
                 <p class="element__title"></p>
-                <div class="like">
-                    <button class="element__like" type="button"></button>
-                    <p class="element__like-number">0</p>
-                </div>
+                <button class="element__like" type="button"></button>
             </div>
         </div>
     </template>
-
-
 </div>
-
-<script src="./pages/index.js" type="module"></script>
 
 </body>
 
