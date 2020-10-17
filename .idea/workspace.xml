@@ -26,7 +26,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc770b99-e6c1-4cfd-b027-a7767d19fcde" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/blocks/element/__like/element__like.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__like/element__like.css" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/__delete-icon/element__delete-icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__delete-icon/element__delete-icon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/__image/element__image.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__image/element__image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/__information/element__information.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__information/element__information.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/__like-number/element__like-number.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__like-number/element__like-number.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/__like/element__like.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__like/element__like.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/__title/element__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__title/element__title.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/element.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/element.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/components/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Api.js" afterDir="false" />
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +149,7 @@
       <workItem from="1602938310916" duration="2518000" />
       <workItem from="1602940900288" duration="21000" />
       <workItem from="1602940953140" duration="699000" />
-      <workItem from="1602942229802" duration="3109000" />
+      <workItem from="1602942229802" duration="710000" />
     </task>
     <servers />
   </component>
@@ -195,10 +210,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="408" y="190" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1602257007395" />
-    <state x="464" y="287" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1602945020841">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="464" y="304" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1601395602201">
+      <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="464" y="287" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.900@0.0.1440.900" timestamp="1602945020841" />
     <state x="464" y="304" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1440.875@0.25.1440.875" timestamp="1601395602200" />
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1602703744061">
       <screen x="0" y="0" width="1440" height="900" />
