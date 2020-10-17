@@ -7,3 +7,23 @@
     background-position: center;
     background-image: url(../../../images/avatar.jpg);
 }
+<<<<<<< HEAD
+=======
+
+.profile__avatar:hover {
+    cursor: pointer;
+}
+.profile__avatar:hover::after {
+    background-color: rgba(0,0,0,.8);
+    content: '';
+    background-image: url('../../../images/avatar-edit.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+ 
+    width: 150px;
+    height: 120px;
+}
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew

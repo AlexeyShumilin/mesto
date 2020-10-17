@@ -9,7 +9,19 @@ const info = document.querySelector(".user-info__job");
 const addButton = document.querySelector(".user-info__add-button");
 const popupImg = document.querySelector(".img-popup");
 const sectionCards = document.querySelector(".elements");
+<<<<<<< HEAD
 const cardSelector = document.querySelector(".template");
+=======
+const cardSelector = document.querySelector('#place-card').content;
+const popupavatarButton = document.querySelector('.profile__avatar');
+const popupSubmit = document.querySelector('.submit-popup');
+
+const popupavatar = document.querySelector('.avatar-popup');
+const avatarInput = popupavatar.querySelector('.popup__Item_type_avatar');
+const popupSubmitButtonAvatar = popupavatar.querySelector('.popup__save');
+
+const validationConteiners = Array.from(document.querySelectorAll('.popup__container'));
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
 
 
 const validationSetup = {
@@ -24,6 +36,17 @@ const validationSetup = {
 };
 
 export {
+<<<<<<< HEAD
+=======
+    validationConteiners,
+    formPlaceSubmitButton,
+    popupSubmit,
+    popupavatar,
+    popupSubmitButtonAvatar,
+    avatarInput,
+    popupUserSaveButton,
+    popupavatarButton,
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
     cardSelector,
     sectionCards,
     validationSetup,
