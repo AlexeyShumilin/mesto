@@ -1,26 +1,15 @@
 .element__like {
-    height: 18px;
-    width: 21px;
     background-image: url(../../../images/element__like.svg);
-    background-size: contain;
-    background-color: white;
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin: auto 15px auto 0;
-    border-width: initial;
-    border-style: none;
-    border-color: initial;
-    border-image: initial;
+    background-color: transparent;
+    border: none;
+    width: 21px;
+    height: 19px;
+    cursor: pointer;
+    transition: transform .3s linear;
 }
 
 .element__like:hover {
-    cursor: pointer;
-    opacity: 0.5;
-    border: none;
-    outline: none;
+    transform: scale(1.03);
 }
 
-.element__like:focus {
-    border: none;
-    outline: none;
-}
+
