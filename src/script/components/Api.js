@@ -15,20 +15,6 @@ export default class Api {
             })
     }
 
-    //запрос массива карточек
-    getInitialCards() {
-        return this._getResponseData(`${this._baseUrl}/cards`, {
-            headers: this._headers
-        })
-    }
-
-    //запрос данных профиля
-    getProfileInfo() {
-        return this._getResponseData(`${this._baseUrl}/users/me`, {
-            headers: this._headers
-        })
-    }
-
     //редактирование профиля
     editProfileInfo(data) {
         return this._getResponseData(`${this._baseUrl}/users/me`, {
@@ -38,6 +24,13 @@ export default class Api {
                 name: data.name,
                 about: data.about
             })
+        })
+    }
+
+    //запрос данных профиля
+    getProfileInfo() {
+        return this._getResponseData(`${this._baseUrl}/users/me`, {
+            headers: this._headers
         })
     }
 
@@ -64,6 +57,14 @@ export default class Api {
         })
     }
 
+    //удаление карточки
+    deleteCard(cardId) {
+        return this._getResponseData(`${this._baseUrl}/cards/${cardId}`, {
+            method: 'DELETE',
+            headers: this._headers
+        })
+    }
+
     //ставим лайк
     setLike(cardId) {
         return this._getResponseData(`${this._baseUrl}/cards/likes/${cardId}`, {
@@ -80,12 +81,10 @@ export default class Api {
         })
     }
 
-    //удаление карточки
-    deleteCard(cardId) {
-        return this._getResponseData(`${this._baseUrl}/cards/${cardId}`, {
-            method: 'DELETE',
+    //запрос массива карточек
+    getInitialCards() {
+        return this._getResponseData(`${this._baseUrl}/cards`, {
             headers: this._headers
         })
     }
-
 }

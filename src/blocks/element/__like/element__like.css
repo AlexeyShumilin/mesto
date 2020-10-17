@@ -1,26 +1,13 @@
 .element__like {
-    height: 18px;
+    background: transparent url(../../../images/element__like.svg) no-repeat center;
+    border: none;
     width: 21px;
-    background-image: url(../../../images/element__like.svg);
-    background-size: contain;
-    background-color: white;
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin: auto 15px auto 0;
-    border-width: initial;
-    border-style: none;
-    border-color: initial;
-    border-image: initial;
-}
-
-.element__like:hover {
+    height: 19px;
     cursor: pointer;
-    opacity: 0.5;
-    border: none;
-    outline: none;
+    transition: transform .3s linear;
+}
+.element__like:hover {
+    transform: scale(1.09);
 }
 
-.element__like:focus {
-    border: none;
-    outline: none;
-}
+
