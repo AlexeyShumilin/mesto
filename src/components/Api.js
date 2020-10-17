@@ -35,12 +35,12 @@ export default class Api {
     }
 
     //редактирование аватара
-    editAvatar(avatarLink) {
+    editAvatar(obj) {
         return this._getResponseData(`${this._baseUrl}/users/me/avatar`, {
             method: 'PATCH',
             headers: this._headers,
             body: JSON.stringify({
-                avatar: avatarLink
+                avatar: obj
             })
         })
     }

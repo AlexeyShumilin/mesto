@@ -3,6 +3,7 @@ export default class UserInfo {
     constructor(userInfo) {
         this._nameInfoElement = userInfo.nameInfoElement;
         this._aboutInfoElement = userInfo.aboutInfoElement;
+        this._userAvatar = userInfo.userAvatar;
 
     }
 
@@ -11,7 +12,7 @@ export default class UserInfo {
         return {
             userName: this._nameInfoElement.textContent,
             userDescription: this._aboutInfoElement.textContent,
-
+            userAvatar: this._userAvatar.style.backgroundImage,
         }
     }
 
@@ -20,4 +21,6 @@ export default class UserInfo {
         if (userDescription) this._aboutInfoElement.textContent = userDescription;
 
     }
+
+
 }

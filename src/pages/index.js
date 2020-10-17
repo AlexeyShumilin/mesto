@@ -1,12 +1,12 @@
-import './index.css';
-import Section         from '../script/components/Section.js';
-import Card            from '../script/components/Card.js';
-import UserInfo        from '../script/components/UserInfo.js';
-import PopupWithImage  from '../script/components/PopupWithImage.js';
-import PopupWithForm   from '../script/components/PopupWithForm.js';
-import FormValidator   from '../script/components/FormValidator.js';
-import Api             from "../script/components/Api.js";
-import PopupWithSubmit from "../script/components/PopupWithSubmit.js";
+//import './index.css';
+import Section         from '../components/Section.js';
+import Card            from '../components/Card.js';
+import UserInfo        from '../components/UserInfo.js';
+import PopupWithImage  from '../components/PopupWithImage.js';
+import PopupWithForm   from '../components/PopupWithForm.js';
+import FormValidator   from '../components/FormValidator.js';
+import Api             from "../components/Api.js";
+import PopupWithSubmit from "../components/PopupWithSubmit.js";
 
 import {
     about,
@@ -29,7 +29,7 @@ import {
     sectionCards,
     validationConteiners,
     validationSetup
-} from "../script/utils/constants.js";
+} from "../utils/constants.js";
 
 let userId = '';
 
@@ -64,6 +64,7 @@ const userDataForm = new PopupWithForm(popupUser, {
 const user = {
     nameInfoElement: name,
     aboutInfoElement: about,
+    userAvatar: popupavatarButton
 }
 
 const userData = new UserInfo(user);
@@ -78,10 +79,11 @@ const openUserInfoForm = () => {
 
 //Создание попапа для аватара
 const avatarEditForm = new PopupWithForm(popupavatar, {
-    submitCallback: () => {
-        renderLoading(true, popupSubmitButtonAvatar);
-        api.editAvatar(avatarInput.value)
-            .then(data => {
+    submitCallback() {
+        renderLoading(true, popupSubmitButtonAvatar,);
+        api
+            .editAvatar(avatarInput.value)
+            .then(data=> {
                 popupavatarButton.style.backgroundImage = `url('${data.avatar}')`;
                 avatarEditForm.close();
             })
@@ -169,19 +171,20 @@ Promise.all([
     api.getInitialCards()
 ])
     .then(values => {
-        const [userInfo, cards] = values;
-        userData.setUserInfo({userName: userInfo.name, userDescription: userInfo.about});
+        const [userInfo, cards ] = values;
+        userData.setUserInfo({userName: userInfo.name, userDescription: userInfo.about,});
         userId = userInfo._id;
-        popupavatarButton.style.backgroundImage = `url('${userInfo.avatar}')`;//записываем свой id в переменную
+        popupavatarButton.style.backgroundImage = `url('${userInfo.avatar}')`;
         section.renderItems(cards.reverse());
     })
     .catch(err => {
         console.log(err);
     });
 
+//включаем валидацию формы
 validationConteiners.forEach(formElement => {
     const newValidator = new FormValidator(validationSetup, formElement);
-    newValidator.enableValidation();                                                                //включаем валидацию формы
+    newValidator.enableValidation();
 });
 
 avatarEditForm.setEventListeners();
