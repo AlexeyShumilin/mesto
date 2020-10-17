@@ -15,9 +15,8 @@ export default class UserInfo {
         }
     }
 
-    setUserInfo({userName, userDescription}) {
+    setUserData = ({userName, userDescription}) => {
         if (userName) this._nameInfoElement.textContent = userName;
         if (userDescription) this._aboutInfoElement.textContent = userDescription;
-
-    }
+    };
 }

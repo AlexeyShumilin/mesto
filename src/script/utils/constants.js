@@ -12,14 +12,14 @@ const addButton = document.querySelector(".user-info__add-button");
 const popupImg = document.querySelector(".img-popup");
 const sectionCards = document.querySelector(".elements");
 const cardSelector = document.querySelector('#place-card').content;
-const popupavatarButton = document.querySelector('.profile__avatar');
+const popupAvatarButton = document.querySelector('.profile__avatar');
 const popupSubmit = document.querySelector('.submit-popup');
 
-const popupavatar = document.querySelector('.avatar-popup');
-const avatarInput = popupavatar.querySelector('.popup__Item_type_avatar');
-const popupSubmitButtonAvatar = popupavatar.querySelector('.popup__save');
+const popupAvatar = document.querySelector('.avatar-popup');
+const avatarInput = popupAvatar.querySelector('.popup__Item_type_avatar');
+const popupSubmitButtonAvatar = popupAvatar.querySelector('.popup__save');
 
-const validationConteiners = Array.from(document.querySelectorAll('.popup__container'));
+const validationContainers = Array.from(document.querySelectorAll('.popup__container'));
 
 
 const validationSetup = {
@@ -32,14 +32,14 @@ const validationSetup = {
 };
 
 export {
-    validationConteiners,
+    validationContainers,
     formPlaceSubmitButton,
     popupSubmit,
-    popupavatar,
+    popupAvatar,
     popupSubmitButtonAvatar,
     avatarInput,
     popupUserSaveButton,
-    popupavatarButton,
+    popupAvatarButton,
     cardSelector,
     sectionCards,
     validationSetup,

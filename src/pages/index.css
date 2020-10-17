@@ -23,7 +23,7 @@
 @import url(../blocks/element/__information/element__information.css);
 @import url(../blocks/element/__like/element__like.css);
 
-@import url(../blocks/element/__like/_clicked/element__like_clicked.css);
+@import url(../blocks/element/__like/_active/element__like_active.css);
 @import url(../blocks/element/__delete-icon/element__delete-icon.css);
 
 @import url(../blocks/element/__title/element__title.css);
