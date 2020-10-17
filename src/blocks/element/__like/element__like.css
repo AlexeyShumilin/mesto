@@ -9,11 +9,7 @@
 }
 
 .element__like:hover {
-    cursor: pointer;
-    opacity: 0.5;
     transform: scale(1.03);
 }
 
-.element__like:hover {
-    transform: scale(1.1);
-}
+
