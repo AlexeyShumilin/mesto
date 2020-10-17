@@ -4,9 +4,9 @@
   "description": "**ссылка** * https://alexeyshumilin.github.io/mesto/.",
   "main": "index.js",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "build": "rimraf dist && webpack",
-    "dev": "webpack-dev-server --open --watch",
-    "deploy": "gh-pages -d dist"
+    "dev": "webpack-dev-server --open --watch"
   },
   "repository": {
     "type": "git",
