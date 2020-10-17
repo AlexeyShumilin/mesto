@@ -7,8 +7,15 @@
     background-position: center center;
     background-repeat: no-repeat;
     margin: auto 15px auto 0;
+<<<<<<< HEAD
     border: none;
     transition: transform .3s linear;
+=======
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+>>>>>>> parent of 0568b76... like button
 }
 
 .element__like:hover {
