@@ -5,8 +5,8 @@ export default class Api {
         this._baseUrl = options.baseUrl;            //Передаем базовый URL
     }
 
-    _getResponseData(url, init) {
-        return fetch(url, init)
+    _getResponseData(url, param) {
+        return fetch(url, param)
             .then((res) => {
                 if (res.ok) {
                     return res.json();

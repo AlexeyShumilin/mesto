@@ -22,12 +22,16 @@
     <list default="true" id="bc770b99-e6c1-4cfd-b027-a7767d19fcde" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/blocks/element/__delete-icon/element__delete-icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__delete-icon/element__delete-icon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/element/__like-number/cards__like-number.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__like-number/element__like-number.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/element/__like/_active/element__like_active.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/__image/element__image.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__image/element__image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/__information/element__information.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__information/element__information.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/__like-number/element__like-number.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__like-number/element__like-number.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/blocks/element/__like/element__like.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__like/element__like.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/page/__profile/pege__profile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/__title/element__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__title/element__title.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/element.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/element.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/user-info/__job/user-info__job.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/components/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/components/Api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +44,7 @@
         <option value="tsconfig.json" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -66,6 +71,8 @@
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.4" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.62" />
     <property name="js.last.introduce.type" value="CONST" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -129,7 +136,10 @@
       <workItem from="1602258303802" duration="1840000" />
       <workItem from="1602400602349" duration="14048000" />
       <workItem from="1602938232001" duration="28000" />
-      <workItem from="1602938310916" duration="1695000" />
+      <workItem from="1602938310916" duration="2518000" />
+      <workItem from="1602940900288" duration="21000" />
+      <workItem from="1602940953140" duration="699000" />
+      <workItem from="1602942229802" duration="710000" />
     </task>
     <servers />
   </component>
