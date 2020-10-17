@@ -13,10 +13,13 @@ export default class UserInfo {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     setUserInfo({name, job}) {
         this._userName.textContent = name;
         this._userJob.textContent = job;
 =======
+=======
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
 =======
 >>>>>>> parent of 7405a3a... finish work 9 first rewiew
     setUserInfo({userName, userDescription}) {
@@ -24,6 +27,9 @@ export default class UserInfo {
         if (userDescription) this._aboutInfoElement.textContent = userDescription;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
+=======
 >>>>>>> parent of 7405a3a... finish work 9 first rewiew
 =======
 >>>>>>> parent of 7405a3a... finish work 9 first rewiew

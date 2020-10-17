@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default class Card {
     constructor({data, handleImageClick},) {
         this._name = data.name;
@@ -14,6 +15,8 @@ export default class Card {
     }
 
 =======
+=======
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
 =======
 >>>>>>> parent of 7405a3a... finish work 9 first rewiew
 export default class Card {                                                                 //класс для описания
@@ -71,6 +74,7 @@ export default class Card {                                                     
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         const cardImage = this._element.querySelector('.element__image');
         const cardTitle = this._element.querySelector('.element__title');
 
@@ -78,6 +82,8 @@ export default class Card {                                                     
         cardImage.alt = this._name;
         cardTitle.textContent = this._name;
 =======
+=======
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
 =======
 >>>>>>> parent of 7405a3a... finish work 9 first rewiew
     //Устанавливаем обработчики
@@ -88,6 +94,9 @@ export default class Card {                                                     
         this._image = this._card.querySelector('.element__image');                   //элемент картинки
         this._likeCount = this._card.querySelector('.element__like-number');                  //Число лайков
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
+=======
 >>>>>>> parent of 7405a3a... finish work 9 first rewiew
 =======
 >>>>>>> parent of 7405a3a... finish work 9 first rewiew
@@ -97,10 +106,13 @@ export default class Card {                                                     
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     _handleLikeToggle = evt => {
         evt.target.classList.toggle('element__like_active');
     };
 =======
+=======
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
 =======
 >>>>>>> parent of 7405a3a... finish work 9 first rewiew
     //функция возвращает элемент для вставки в разметку
@@ -117,10 +129,13 @@ export default class Card {                                                     
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     _setEventListeners() {
         const cardLikeButton = this._element.querySelector('.element__like');
         const cardDeleteButton = this._element.querySelector('.element__delete-icon');
 =======
+=======
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
 =======
 >>>>>>> parent of 7405a3a... finish work 9 first rewiew
         //заполнение полей карточки
@@ -133,10 +148,14 @@ export default class Card {                                                     
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         cardLikeButton.addEventListener('click', (evt) => this._handleLikeToggle(evt));
         cardDeleteButton.addEventListener('click', (evt) => this._handleDeleteCard(evt));
         this._element.querySelector('.element__image')
             .addEventListener('click', () => this._handleImageClick(this._name, this._link));
+=======
+        return card;                                                             //возвращаем карточку
+>>>>>>> parent of 7405a3a... finish work 9 first rewiew
 =======
         return card;                                                             //возвращаем карточку
 >>>>>>> parent of 7405a3a... finish work 9 first rewiew
