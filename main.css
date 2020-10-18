@@ -20,6 +20,7 @@
 .element__image{width:282px;height:282px;border-radius:10px 10px 0 0;-o-object-fit:cover;object-fit:cover}.element__image:hover{cursor:pointer}
 .element__information{display:flex;align-items:center;justify-content:space-between;box-sizing:border-box;padding:0 22px}
 .element__like{background:transparent url(./images/element__like.svg) no-repeat 50%;border:none;width:21px;height:19px;cursor:pointer;transition:transform .3s linear}.element__like:hover{transform:scale(1.09)}
+.like{display:flex;flex-direction:column;align-items:center}
 .element__like_clicked{background-image:url(./images/liked.svg)}
 .element__delete-icon{display:none;background-image:url(./images/delete-icon.svg);background-color:hsla(0,0%,50.2%,.2);height:30px;width:30px;position:absolute;right:15px;top:18px;background-repeat:no-repeat;border:initial none;border-color:initial;-o-border-image:initial;border-image:initial;border-radius:20%;background-position:50%}.element__delete-icon:hover{opacity:.6;cursor:pointer}
 .element__title{margin:24px 24px 24px 0;font-weight:900;font-size:24px;line-height:29px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
