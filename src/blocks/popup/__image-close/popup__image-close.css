@@ -10,13 +10,6 @@
     right: -37px;
 }
 
-@media screen and (max-width: 1024px) {
-    .popup__image-close {
-        background-size: contain;
-        height: 50px;
-        right: -32px;
-    }
-}
 
 .popup__image-close:hover {
     cursor: pointer;

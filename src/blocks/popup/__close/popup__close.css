@@ -10,6 +10,15 @@
     background: rgba(0, 0, 0, 0) url("../../../images/close-icon.svg") no-repeat center;
 }
 
+
+@media screen and (max-width: 1024px) {
+    .popup__close {
+        background-size: contain;
+        height: 50px;
+        right: -32px;
+    }
+}
+
 .popup__close:hover {
     opacity: 0.6;
     cursor: pointer;
