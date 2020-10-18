@@ -83,8 +83,8 @@ const avatarEditForm = new PopupWithForm(popupavatar, {
         renderLoading(true, popupSubmitButtonAvatar,);
         api
             .editAvatar(avatarInput.value)
-            .then(data=> {
-                popupavatarButton.style.backgroundImage = `url('${data.avatar}')`;
+            .then((data) => {
+                userData.setUserAvatar(data);
                 avatarEditForm.close();
             })
             .catch(err => console.log(err))
@@ -174,7 +174,8 @@ Promise.all([
         const [userInfo, cards ] = values;
         userData.setUserInfo({userName: userInfo.name, userDescription: userInfo.about,});
         userId = userInfo._id;
-        popupavatarButton.style.backgroundImage = `url('${userInfo.avatar}')`;
+        userData.setUserAvatar(userInfo);
+
         section.renderItems(cards.reverse());
     })
     .catch(err => {

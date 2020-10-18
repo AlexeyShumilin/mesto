@@ -1,3 +1,4 @@
+
 export default class UserInfo {
 
     constructor(userInfo) {
@@ -20,6 +21,9 @@ export default class UserInfo {
         if (userName) this._nameInfoElement.textContent = userName;
         if (userDescription) this._aboutInfoElement.textContent = userDescription;
 
+    }
+    setUserAvatar(data) {
+        this._userAvatar.style.backgroundImage = `url('${data.avatar}')`;
     }
 
 
