@@ -31,7 +31,7 @@
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/page/__footer/page__footer.css);
 @import url(../blocks/footer/__title/footer__title.css);
-
+@import url(../blocks/Like/Like.css);
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/_is-opened/popup_is-opened.css);
 @import url(../blocks/popup/_edit/_is-opened/popup_edit_is-opened.css);

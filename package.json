@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rimraf dist && webpack",
     "dev": "webpack-dev-server --open --watch",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
