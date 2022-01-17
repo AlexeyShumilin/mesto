@@ -1,7 +1,7 @@
 # Mesto
 
-### 
-* https://alexeyshumilin.github.io/mesto/.
+### Link
+ https://alexeyshumilin.github.io/mesto/.
 
 ### 
 Service for viewing and posting photos, with the ability to like, edit the profile. All data is taken and sent to the server, there is form validation.
