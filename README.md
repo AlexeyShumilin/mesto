@@ -16,7 +16,7 @@ close the popup with the esc key.
 building a project with webpack
 
 ### Stack:
-HTML/CSS(flexbox, grid), БЭМ, Javascript, Webpack
+HTML/CSS(flexbox, grid), BEM, Javascript, Webpack
 
 ### install:
 
