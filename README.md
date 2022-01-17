@@ -1,22 +1,31 @@
 # Проект 4: Место
 
-**ссылка**
+**link**
 * https://alexeyshumilin.github.io/mesto/.
 
-### Описание
-Одностраничный сайт, загружающий фотографии.
+### 
+Service for viewing and posting photos, with the ability to like, edit the profile. All data is taken and sent to the server, there is form validation.
 
 ### Функционал:
-сделлано: редактирование информации о пользователе.
-          добавление карточки.
-          Лайк карточки.
-          Удаление карточки.
-          Открытие попапа с картинкой при клике на карточку.
-          закрытие попапа клавишей esc.
-          сборка проекта при помощи Webpack
-          
+Editing user information.
+Adding a card.
+Like cards.
+Removing a card.
+Opening a popup with a picture when clicking on the card.
+close the popup with the esc key.
+building a project with webpack
 
-
-
-### Стэк:
+### Stack:
 HTML/CSS(flexbox, grid), БЭМ, Javascript, Webpack
+
+### install:
+
+git clone https://github.com/RodionOtto/mesto.git
+
+cd mesto
+
+npm i webpack --save-dev
+
+npm run build
+
+npm run dev
