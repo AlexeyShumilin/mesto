@@ -1,12 +1,12 @@
-# Проект 4: Место
+# Mesto
 
-**link**
+### 
 * https://alexeyshumilin.github.io/mesto/.
 
 ### 
 Service for viewing and posting photos, with the ability to like, edit the profile. All data is taken and sent to the server, there is form validation.
 
-### Функционал:
+### Functionality:
 Editing user information.
 Adding a card.
 Like cards.
